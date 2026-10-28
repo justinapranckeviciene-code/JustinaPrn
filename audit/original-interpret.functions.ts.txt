@@ -1,0 +1,136 @@
+import { createServerFn } from "@tanstack/react-start";
+import { z } from "zod";
+
+const InputSchema = z.object({
+  question: z.string().trim().min(3).max(500),
+  cards: z
+    .array(z.object({ name: z.string().max(60), position: z.string().max(60), reversed: z.boolean() }))
+    .min(1)
+    .max(10),
+});
+
+const ReadingSchema = z.object({
+  direct: z.string(),
+  story: z.string(),
+  next: z.string(),
+  caution: z.string(),
+  followups: z.array(z.string()),
+});
+export type Reading = z.infer<typeof ReadingSchema>;
+export type InterpretResult =
+  | { ok: true; reading: Reading }
+  | { ok: false; error: string; retryable: boolean };
+
+const jsonSchema = {
+  type: "object",
+  additionalProperties: false,
+  required: ["direct", "story", "next", "caution", "followups"],
+  properties: {
+    direct: { type: "string" },
+    story: { type: "string" },
+    next: { type: "string" },
+    caution: { type: "string" },
+    followups: { type: "array", items: { type: "string" } },
+  },
+};
+
+const INSTRUCTIONS = `Tu esi patyręs Taro skaitytojas. Atsakyk TIK lietuviškai.
+Atsakymas turi būti konkretus pagal vartotojo klausimą ir remtis VISOMIS pateiktomis kortomis, jų pozicijomis ir orientacija (tiesi ar apversta).
+Nepateik garantuotų prognozių – kalbėk apie tendencijas, galimybes ir pasirinkimus. Nedavinėk medicininių, teisinių ar finansinių nurodymų.
+Atsakyk būtent į vartotojo pateiktą klausimą – įvardyk jo temą savais žodžiais, nerašyk bendrų frazių, tinkančių bet kokiam klausimui.
+Laukai: direct – tiesus 2–3 sakinių atsakymas į klausimą; story – kaip kortos kartu pasakoja istoriją (paminėk kiekvieną kortą, jos poziciją ir ar ji tiesi, ar apversta); next – konkretus kitas žingsnis; caution – į ką atsargiai atkreipti dėmesį; followups – 3 trumpi papildomi klausimai, kuriuos vartotojas galėtų užduoti.
+Būk glaustas: iš viso ne daugiau kaip ~250 žodžių.`;
+
+export const interpretReading = createServerFn({ method: "POST" })
+  .inputValidator((d: unknown) => InputSchema.parse(d))
+  .handler(async ({ data }): Promise<InterpretResult> => {
+    const apiKey = process.env["LOVABLE_API_KEY"];
+    if (!apiKey) return { ok: false, error: "AI paslauga nesukonfigūruota.", retryable: false };
+
+    const cardsText = data.cards
+      .map((c, i) => `${i + 1}. ${c.position}: ${c.name} (${c.reversed ? "apversta" : "tiesi"})`)
+      .join("\n");
+
+    let res: Response;
+    try {
+      res = await fetch("https://ai.gateway.lovable.dev/v1/responses", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+          "Lovable-API-Key": apiKey,
+          "X-Lovable-AIG-SDK": "fetch",
+        },
+        body: JSON.stringify({
+          model: "openai/gpt-6-astra",
+          stream: true,
+          store: false,
+          reasoning: { effort: "low" },
+          instructions: INSTRUCTIONS,
+          input: [{ role: "user", content: `Klausimas: ${data.question}\n\nIštrauktos kortos:\n${cardsText}` }],
+          text: { format: { type: "json_schema", name: "tarot_reading", strict: true, schema: jsonSchema } },
+        }),
+      });
+    } catch {
+      return { ok: false, error: "Nepavyko pasiekti AI paslaugos.", retryable: true };
+    }
+
+    if (!res.ok || !res.body) {
+      const status = res.status;
+      let msg = "";
+      try {
+        const j = (await res.json()) as { message?: string; error?: { message?: string } };
+        msg = j.message ?? j.error?.message ?? "";
+      } catch { /* ignore */ }
+      console.error("AI gateway error", status, msg);
+      if (status === 429) return { ok: false, error: "Per daug užklausų. Pabandykite po minutės.", retryable: true };
+      if (status === 402) return { ok: false, error: msg || "Baigėsi AI kreditai.", retryable: false };
+      if (status === 403) return { ok: false, error: msg || "AI prieiga atmesta.", retryable: false };
+      return { ok: false, error: "AI paslauga laikinai nepasiekiama.", retryable: status >= 500 };
+    }
+
+    // Consume SSE stream server-side.
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buf = "";
+    let text = "";
+    let refused = false;
+    let completed = false;
+    for (;;) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      let idx;
+      while ((idx = buf.indexOf("\n\n")) !== -1) {
+        const frame = buf.slice(0, idx);
+        buf = buf.slice(idx + 2);
+        for (const line of frame.split("\n")) {
+          if (!line.startsWith("data:")) continue;
+          const payload = line.slice(5).trim();
+          if (!payload || payload === "[DONE]") continue;
+          let ev: { type?: string; delta?: string };
+          try {
+            ev = JSON.parse(payload) as { type?: string; delta?: string };
+          } catch { continue; /* partial */ }
+          if (ev.type === "response.output_text.delta" && ev.delta) text += ev.delta;
+          if (ev.type === "response.refusal.delta") refused = true;
+          if (ev.type === "response.failed" || ev.type === "response.incomplete" || ev.type === "error") {
+            await reader.cancel().catch(() => {});
+            return { ok: false, error: "AI nepavyko sugeneruoti atsakymo.", retryable: true };
+          }
+          if (ev.type === "response.completed") completed = true;
+        }
+      }
+      if (completed) {
+        await reader.cancel().catch(() => {});
+        break;
+      }
+    }
+    if (refused) return { ok: false, error: "AI atsisakė atsakyti į šį klausimą.", retryable: false };
+    try {
+      return { ok: true, reading: ReadingSchema.parse(JSON.parse(text)) };
+    } catch {
+      return { ok: false, error: "AI grąžino netinkamą atsakymą.", retryable: true };
+    }
+  });
+
