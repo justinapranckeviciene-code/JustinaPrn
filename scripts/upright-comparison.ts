@@ -39,7 +39,10 @@ for(const [id,category,question,ids] of cases) {
       }
     });
     // Only authored synthetic questions and readings are emitted; no visitors' data or secrets.
-    console.log("UPRIGHT_QA_RESULT",JSON.stringify({id,category,version,question,cards,...result,accounted}));
+    const record=JSON.stringify({id,category,version,question,cards,...result,accounted});
+    for(let offset=0,part=0;offset<record.length;offset+=900,part++){
+      console.log("UPRIGHT_QA_CHUNK",JSON.stringify({id,version,part,text:record.slice(offset,offset+900)}));
+    }
     if(!result.ok||!accounted) throw new Error("Comparison response or accounting failed");
     await new Promise(r=>setTimeout(r,6500));
   }

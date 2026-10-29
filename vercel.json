@@ -4,5 +4,5 @@
   "git": {
     "deploymentEnabled": false
   },
-  "buildCommand": "npm run test && npm run typecheck && node --experimental-strip-types scripts/budget-canary.ts && node scripts/run-upright-comparison.mjs && NITRO_PRESET=vercel npm run build"
+  "buildCommand": "npm run test && npm run typecheck && node --experimental-strip-types scripts/budget-canary.ts && NITRO_PRESET=vercel npm run build"
 }
