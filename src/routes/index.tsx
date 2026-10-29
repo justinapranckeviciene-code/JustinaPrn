@@ -123,7 +123,7 @@ function Index() {
   }
 
   return (
-    <main className="bg-ritual min-h-screen px-4 pb-16 pt-10 sm:px-6">
+    <main className="bg-ritual min-h-screen px-4 pb-28 pt-10 sm:px-6">
       <div className="mx-auto max-w-xl">
         <header className="text-center">
           <p className="text-[11px] tracking-[0.3em] text-gold">✦ mom_justina ✦</p>
@@ -244,7 +244,7 @@ function Index() {
               href={coffeeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-11 items-center justify-center rounded-md border border-gold/50 px-5 py-2 text-sm text-gold transition-colors hover:bg-gold/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-50 inline-flex min-h-11 max-w-[calc(100vw-2rem)] items-center justify-center rounded-full border border-gold/60 bg-card px-5 py-2 text-sm text-gold shadow-[0_4px_24px_rgba(0,0,0,0.35)] transition-colors hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold sm:right-6"
             >
               ☕ Pavaišink mane kava
             </a>
