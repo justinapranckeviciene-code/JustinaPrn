@@ -1,5 +1,11 @@
 # mom_justina — Taro
 
+## Atidaryti svetainės peržiūrą
+
+**[ATIDARYTI mom_justina TARO](https://mom-justina-taro-dutjxws2a-justina-prn.vercel.app)**
+
+Peržiūra paruošta Vercel 2026-10-29, deployment `dpl_jJMbBwkRpcX73STcfnohqWEc26DK`, source commit `903655e4de8246f1c4bec478487e8d1d6f420d46`. Vercel Authentication išsaugota: gali reikėti prisijungti prie savininkės Vercel paskyros. Tai kortų ir dizaino peržiūra. AI interpretacijos išjungtos, kol nėra saugiai prijungto rakto ir patikrinto biudžeto. Pilno paleidimo bei 30 gyvų AI palyginimų dar nėra. Automatinis HTTP turinio patikrinimas per Vercel jungtį buvo sustabdytas prisijungimo apsaugos, todėl naršyklės patikra dar nebaigta.
+
 Migration of Taro Mom Justina from Lovable to a standalone TanStack Start / React application for Vercel. Original source snapshot: `cb0bdb65fdf6580f71c69d85eeb29a28ca195ff2`, Lovable project `6f00f10c-5584-4844-b226-2acf49264353`.
 
 ## Status
