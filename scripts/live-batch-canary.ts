@@ -4,7 +4,9 @@ import { mutateWallet } from '../src/lib/tarot/wallet.server';
 import { claim, settle, chargeMicroEur, inputTokenBound, OUTPUT_TOKEN_CEILING } from '../src/lib/tarot/wallet-core';
 import { INSTRUCTIONS, jsonSchema } from '../src/lib/tarot/prompt';
 import { CASES } from '../audit/questions';
-for (const test of CASES) {
+const start=Number(process.env.QA_START || '1');
+if(!Number.isInteger(start)||start<1||start>30) throw new Error('Invalid QA start');
+for (const test of CASES.slice(start-1)) {
 const data={question:test.question,cards:test.cards};
 console.log('LIVE_QA_CASE',test.id,test.category);
 const id=randomUUID();

@@ -63,7 +63,7 @@ export async function mutateWallet<T>(
   update: (wallet: Wallet) => T,
   store: LedgerStore = blobLedger(),
 ): Promise<T> {
-  for (let attempt = 0; attempt < 6; attempt++) {
+  for (let attempt = 0; attempt < 10; attempt++) {
     const snapshot = await store.read();
     const wallet = snapshot?.wallet ?? emptyWallet();
     const result = update(wallet);
@@ -71,8 +71,8 @@ export async function mutateWallet<T>(
       await store.write(wallet, snapshot?.etag);
       return result;
     } catch (error) {
-      if (!store.isConflict(error) || attempt === 5) throw error;
-      await new Promise((resolve) => setTimeout(resolve, 25 * (attempt + 1)));
+      if (!store.isConflict(error) || attempt === 9) throw error;
+      await new Promise((resolve) => setTimeout(resolve, Math.min(2000, 100 * 2 ** attempt)));
     }
   }
   throw new Error("Ledger unavailable");
