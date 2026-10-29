@@ -29,6 +29,8 @@ export function blobLedger(path = WALLET_PATH): LedgerStore {
         const result = await get(path, {
           access: "private",
           useCache: false,
+          // Compressed responses use weak representation ETags which cannot be used for CAS.
+          headers: { "accept-encoding": "identity" },
           abortSignal: AbortSignal.timeout(8000),
         });
         if (!result) return null;

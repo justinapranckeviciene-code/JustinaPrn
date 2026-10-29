@@ -27,7 +27,15 @@ if (
   final.wallet.spent["2026-10"] > LIMIT_MICRO_EUR
 )
   throw new Error("Budget reconciliation failed");
-await del(path, { ifMatch: final.etag });
+// Exercise the >1 KiB threshold where delivery compression changes HTTP ETags.
+await mutateWallet((wallet) => {
+  wallet.events = Array.from({length: 40}, (_, i) => ({at: now.getTime(), client: `qa-large-ledger-${i}`}));
+}, store);
+await mutateWallet((wallet) => { wallet.spent["2026-10"]! += 1; }, store);
+const large = await store.read();
+if (!large || large.wallet.spent["2026-10"] !== 1_000_001 || JSON.stringify(large.wallet).length < 1024)
+  throw new Error("Large-ledger conditional update failed");
+await del(path, { ifMatch: large.etag });
 console.log(
-  "Private budget store verified: concurrent cap, reconciliation, private cleanup. No AI calls.",
+  "Private budget store verified: concurrent cap, reconciliation, large-ledger identity ETag, private cleanup. No AI calls.",
 );
