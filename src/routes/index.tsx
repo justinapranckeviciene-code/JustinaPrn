@@ -258,13 +258,7 @@ function Index() {
             </button>
           )}
           <p className="mt-2 text-xs text-muted-foreground">
-            {coffeeUrl
-              ? "Parama savanoriška. Ritualu gali naudotis nemokamai."
-              : "Savanoriškos paramos galimybė ruošiama."}
-          </p>
-          <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
-            Prašant AI interpretacijos, klausimas ir ištrauktos kortos perduodami „OpenAI“. Nerašyk
-            vardų ar kitų jautrių duomenų. Klausimų savo duomenų bazėje nesaugome.
+            Energetiniai mainai ✧ Tavo palaikymas padeda man kurti.
           </p>
         </footer>
       </div>
