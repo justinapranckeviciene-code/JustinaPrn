@@ -1,5 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "tanstack-start",
-  "git": { "deploymentEnabled": false }
+  "git": {
+    "deploymentEnabled": false
+  },
+  "buildCommand": "node --experimental-strip-types scripts/budget-canary.ts && node scripts/ledger-status.mjs && NITRO_PRESET=vercel npm run build"
 }

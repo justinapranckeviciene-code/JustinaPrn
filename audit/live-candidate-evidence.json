@@ -1,0 +1,924 @@
+{
+  "date": "2026-10-29",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "low",
+  "baselineStatus": "Old public site returned Not enough credits. 0/30 paired comparisons. These results establish candidate behavior only.",
+  "summary": {
+    "count": 30,
+    "input_tokens": 13428,
+    "output_tokens": 16094,
+    "standard_usd_estimate": 0.93898,
+    "conservative_eur": 2.01273,
+    "conservative_avg_eur": 0.067091,
+    "requests_at_10eur_with_full_initial_reservation": 123,
+    "pair_comparisons": 0
+  },
+  "deployments": [
+    "dpl_Gdis6VFTisAWNivGdBNJxzgNbVth",
+    "dpl_DVrV5cboH8FQEVnHa7TfMRb7RQxz"
+  ],
+  "candidateReadings": [
+    {
+      "id": "Q01",
+      "category": "santykiai",
+      "ok": true,
+      "reading": {
+        "direct": "Santykius su buvusiu partneriu verta atsargiai patyrinėti, bet neskubėti jų atnaujinti: kortos simboliškai rodo naujos pradžios galimybę ir kartu perspėja dėl neaiškių ketinimų ar pažadų be veiksmų. Svarbiausia – ar pasikeitė tai, dėl ko išsiskyrėte, o ne vien ar tebėra trauka.",
+        "story": "Dabartinėje situacijoje tiesus Kvailys žymi norą pradėti iš naujo, suteikti ryšiui dar vieną galimybę, tačiau gali reikšti ir polinkį nuvertinti ankstesnes pamokas. Kliūties pozicijoje apverstas Magas atkreipia dėmesį į galimą neatitikimą tarp žodžių ir veiksmų, įtakos žaidimus arba negebėjimą norų paversti tikru pokyčiu; tai nėra įrodymas, kad buvęs partneris meluoja. Patarimo pozicijoje tiesi Žynė kviečia neskubėti, įsiklausyti į savo pojūčius ir pastebėti, kas lieka nepasakyta. Kartu kortos siūlo ne aklą sugrįžimą, o ramų patikrinimą, ar naujai pradžiai yra pagrindas.",
+        "next": "Jei bendravimas tau saugus ir norimas, pasiūlyk vieną pokalbį be įsipareigojimo susitaikyti. Aptarkite išsiskyrimo priežastį, kas konkrečiai pasikeitė ir kokių ribų reikėtų abiem; po pokalbio skirk sau laiko apsispręsti.",
+        "caution": "Nepainiok nostalgijos su pasitikėjimu. Spaudimas greitai sugrįžti, atsakomybės vengimas ar pasikartojantys tušti pažadai būtų priežastys pristabdyti; intuiciją verta tikrinti pagal elgesį.",
+        "followups": [
+          "Ką man svarbu suprasti prieš sugrįžtant?",
+          "Kokio seno santykių modelio nekartoti?",
+          "Kokios ribos padėtų bandyti iš naujo?"
+        ]
+      }
+    },
+    {
+      "id": "Q02",
+      "category": "santykiai",
+      "ok": true,
+      "reading": {
+        "direct": "Kai partneris vengia pokalbio, kortos siūlo ne stiprinti spaudimą, o pakeisti kvietimo kalbėtis būdą: trumpai įvardyti savo jausmą, vieną konkretų poreikį ir pasiūlyti pasirinkti laiką. Gali padėti švelnus tonas kartu su aiškia riba – gerbti jo poreikį atsitraukti, bet nepalikti svarbios temos atidėtos neribotam laikui.",
+        "story": "Dabartinėje situacijoje apversta Imperatorė gali simbolizuoti neišgirstą artumo poreikį arba nuovargį, kai ryšį stengiesi palaikyti daugiausia tu. Kliūties pozicijoje tiesus Imperatorius išryškina griežtumo, kontrolės ar taisyklių temą: pokalbis gali strigti, jei svarbiau išlaikyti savo poziciją negu išgirsti kitą. Tai nebūtinai apibūdina vien partnerį – verta pastebėti abiejų laikyseną. Patarimo pozicijoje apverstas Hierofantas kviečia atsisakyti įprasto scenarijaus, kaip pora „privalo“ kalbėtis: vietoj ilgo rimto pokalbio išbandyti trumpą pasivaikščiojimą, žinutę ar vieną klausimą vienu metu.",
+        "next": "Ramiu metu pasakyk: „Kai mūsų pokalbis lieka atidėtas, jaučiuosi nutolęs nuo tavęs. Man svarbu aptarti vieną dalyką. Ar galėtume skirti dešimt minučių šiandien vakare, ar tau patogiau rytoj?“ Jei netinka abu variantai, paprašyk pasiūlyti kitą konkretų laiką.",
+        "caution": "Kortos neatskleidžia tikrųjų partnerio vengimo priežasčių. Nelaikyk tylos automatiškai abejingumu, tačiau stebėk, ar po pauzės jis grįžta prie temos: vien tavo pastangos abipusio dialogo nesukurs.",
+        "followups": [
+          "Kaip išsakyti poreikius be kaltinimų?",
+          "Kokią ribą nusibrėžti, jei pokalbis nuolat atidedamas?",
+          "Kaip pastebėti, kad abu esame pasirengę kalbėtis?"
+        ]
+      }
+    },
+    {
+      "id": "Q03",
+      "category": "santykiai",
+      "ok": true,
+      "reading": {
+        "direct": "Gali nepastebėti, kad jūsų dažnuose ginčuose svarbus ne vien nesutarimo turinys, bet ir tai, kaip bandote būti išgirsti bei paveikti pokalbio kryptį. Kortos siūlo pasvarstyti, ar noras laimėti neužgožia galimybės suprasti, kas kiekvienam iš jūsų iš tiesų svarbu.",
+        "story": "Dabartinės situacijos pozicijoje tiesūs Įsimylėjėliai iškelia ryšio, vertybių ir pasirinkimo temą: ginčas gali atverti skirtumą tarp to, ką laikote artumu, pagarba ar bendru sprendimu. Kliūties pozicijoje apverstas Vežimas rodo galimą krypties praradimą — pokalbis įsibėgėja, mėginama jį kontroliuoti arba traukiama į skirtingas puses, nebesutariant, ką norima išspręsti. Patarimo pozicijoje tiesi Jėga kviečia ne nusileisti bet kokia kaina, o ramiai išlaikyti ribas ir smalsumą. Kartu šios kortos siūlo perkelti dėmesį nuo „kas teisus?“ prie „kaip išgirsti vienas kitą neprarandant savęs?“",
+        "next": "Ramiu metu pasirink vieną neseną ginčą ir paklausk: „Ką tau buvo svarbiausia, kad aš suprasčiau?“ Pirmiausia savais žodžiais pakartok atsakymą, neatsikirsdamas, tada įvardyk savo poreikį ir pasiūlyk vieną konkretų pokalbio pokytį.",
+        "caution": "Švelnumas nereiškia pareigos toleruoti žeminimą ar vienam tvarkyti santykį. Kortos neatskleidžia kito žmogaus minčių ir neįrodo, kad atsakomybė už ginčus vienoda.",
+        "followups": [
+          "Kokį savo poreikį ginčuose nutyliu?",
+          "Kaip atpažinti kovos dėl kontrolės pradžią?",
+          "Kokią ribą man svarbu išsakyti?"
+        ]
+      }
+    },
+    {
+      "id": "Q04",
+      "category": "santykiai",
+      "ok": true,
+      "reading": {
+        "direct": "Šioje draugystėje ribas verta pradėti nuo aiškaus įvardijimo, ko nebenori daryti, o ne nuo bandymo įrodyti, kad esi išnaudojama. Kortos kviečia pastebėti pasikartojantį nelygiavertiškumą, pasakyti konkretų „ne“ ir vertinti, ar tavo riba gerbiama.",
+        "story": "Dabartinės situacijos pozicijoje apverstas Atsiskyrėlis gali atspindėti vienišumą pačioje draugystėje arba užsitęsusį svarstymą, ar turi teisę atsisakyti. Kliūties pozicijoje tiesus Likimo ratas rodo galimą pasikartojantį ciklą: prašymas, tavo nusileidimas, nuoskauda, trumpas pagerėjimas. Geri tarpsniai gali palaikyti viltį, nors bendravimo modelis nesikeičia. Patarimo pozicijoje apverstas Teisingumas kviečia atpažinti nelygius mainus ir nebesiteisinti už savo poreikius. Tai ne raginimas bausti kitą žmogų, o siūlymas susigrąžinti nuoseklumą tarp to, ką jauti, sakai ir darai.",
+        "next": "Pasirink vieną dažną situaciją ir pasiruošk sakinį: „Negaliu kiekvieną kartą keisti savo planų dėl tavo prašymų. Šįkart nepadėsiu.“ Jei spaudimas tęsis, ramiai pakartok atsakymą, nekurk naujų pasiteisinimų ir prireikus užbaik pokalbį.",
+        "caution": "Kortos neįrodo kito žmogaus ketinimų. Stebėk elgesį: nusivylimas tavo atsisakymu savaime nėra ribos pažeidimas, tačiau kaltinimas, pašaipos ar nuolatinis spaudimas yra svarbūs signalai. Kaltės jausmas nereiškia, kad tavo riba neteisinga.",
+        "followups": [
+          "Kurią ribą šioje draugystėje nustatyti pirmiausia?",
+          "Kaip atsakyti į kaltinimus pasakius „ne“?",
+          "Kaip atpažinti tikrą draugystės pokytį?"
+        ]
+      }
+    },
+    {
+      "id": "Q05",
+      "category": "santykiai",
+      "ok": true,
+      "reading": {
+        "direct": "Kad santykiuose būtų daugiau pasitikėjimo, gali padėti pauzė prieš reaguojant, atviresnis pokalbis apie baimes ir maži, nuosekliai vykdomi susitarimai. Kortos kviečia keisti įstrigusius bendravimo įpročius, tačiau pasitikėjimo kūrimas priklauso nuo abiejų žmonių pastangų.",
+        "story": "Dabartinės situacijos pozicijoje tiesus Pakaruoklis simbolizuoja sustojimą: galbūt lauki aiškumo arba mėgini suprasti santykius iš vienos perspektyvos. Jis siūlo prieš darant išvadas išgirsti, kaip tą pačią situaciją patiria partneris. Kliūties pozicijoje apversta Mirtis gali rodyti prisirišimą prie senų reakcijų – nutylėjimo, gynybos ar ankstesnių nuoskaudų kartojimo. Tai nebūtinai santykių pabaigos ženklas; veikiau kvietimas paleisti tai, kas trukdo jiems keistis. Patarimo pozicijoje tiesus Saikingumas ragina derinti atvirumą su taktu, o artumą – su asmeninėmis ribomis. Kartu kortos siūlo kelią nuo sustojimo ir perspektyvos pakeitimo prie ramaus, nuoseklaus naujų įpročių kūrimo.",
+        "next": "Pasirink ramų laiką ir pasakyk: „Kai nutinka X, jaučiuosi nesaugiai. Man padėtų Y. Kas tau padėtų labiau manimi pasitikėti?“ Susitarkite dėl vieno konkretaus veiksmo, pavyzdžiui, pranešti pasikeitus bendriems planams, ir po savaitės aptarkite, kaip sekėsi.",
+        "caution": "Kantrybė neturėtų virsti neribotu laukimu ar pasikartojančio melo pateisinimu. Pasitikėjimą vertink pagal veiksmų nuoseklumą, o ne vien pažadus; kortos nėra partnerio ketinimų įrodymas.",
+        "followups": [
+          "Kokį bendravimo įprotį man verta keisti?",
+          "Kaip išsakyti savo baimes nekaltinant?",
+          "Kokios ribos padėtų kurti pasitikėjimą?"
+        ]
+      }
+    },
+    {
+      "id": "Q06",
+      "category": "santykiai",
+      "ok": true,
+      "reading": {
+        "direct": "Šių kortų simbolika labiau kreipia į vienatvės baimės ir prisirišimo tyrinėjimą, o ne į aiškų patvirtinimą, kad susitaikyti skatina meilė. Meilės gali būti, tačiau svarbu atskirti ilgesį konkrečiam žmogui nuo noro susigrąžinti pažįstamą saugumą.",
+        "story": "Dabartinėje situacijoje apverstas Velnias gali rodyti pastangas išsilaisvinti iš stipraus prisirišimo ar pasikartojančio santykių modelio: dalis tavęs galbūt jau nenori grįžti į tai, kas varžė. Kliūties pozicijoje tiesus Bokštas išryškina išsiskyrimo sukrėtimą ir sugriuvusį bendros ateities vaizdinį. Noras susitaikyti gali būti bandymas atšaukti šį praradimą, nebūtinai kurti kitokį ryšį. Patarimo pozicijoje apversta Žvaigždė kviečia pastebėti nusilpusią viltį ir pasitikėjimą savimi, užuot tikėjus, kad juos sugrąžins tik buvęs partneris. Kartu kortos siūlo pirmiausia atkurti vidinę atramą — tuomet tavo noras susitaikyti gali tapti aiškesnis.",
+        "next": "Prieš siūlydamas susitaikyti, užrašyk du sąrašus: „Ko ilgiuosi šiame žmoguje?“ ir „Ko bijau likęs be šio ryšio?“ Tada atsakyk: jei šiandien nesijausčiau vienišas, ar vis tiek rinkčiausi šį žmogų ir kokiomis pasikeitusiomis sąlygomis?",
+        "caution": "Nepainiok palengvėjimo atnaujinus kontaktą su santykių pagerėjimu. Kortos negali nustatyti tavo tikrųjų motyvų — juos geriau parodo savistaba ir tai, ar abu pasirengę keisti ankstesnius santykių modelius.",
+        "followups": [
+          "Ko iš tikrųjų ilgiuosi šiame ryšyje?",
+          "Kas turėtų pasikeisti prieš susitaikant?",
+          "Kaip atskirti meilę nuo prisirišimo?"
+        ]
+      }
+    },
+    {
+      "id": "Q07",
+      "category": "darbas",
+      "ok": true,
+      "reading": {
+        "direct": "Šį rudenį verta tyrinėti darbo keitimo galimybes, bet kortų simbolika labiau palaiko apgalvotą persiorientavimą nei skubų išėjimą. Pokytis būtų prasmingesnis, jei aiškiai įvardytum, ko dabartiniame darbe trūksta ir kuo nauja vieta tai iš tiesų pakeistų.",
+        "story": "Dabartinės situacijos pozicijoje tiesus Mėnulis rodo neaiškumą: galbūt sunku atskirti nuojautą, kad metas išeiti, nuo baimės ar neišsamios informacijos apie darbo aplinką. Kliūties pozicijoje apversta Saulė gali simbolizuoti sumažėjusį pasitenkinimą, pripažinimo stoką arba lūkestį, kad naujas darbas savaime grąžins entuziazmą. Patarimo pozicijoje tiesus Teismas kviečia sąžiningai įvertinti savo profesinį kelią ir priimti sąmoningą sprendimą, o ne kartoti ankstesnį pasirinkimo modelį. Kartu šios kortos siūlo rudenį išnaudoti aiškumui ir kryptingai paieškai, nes pats nepasitenkinimas dar nepasako, kuris pasiūlymas būtų tinkamas.",
+        "next": "Užrašyk tris konkrečias priežastis, kodėl nori keisti darbą, ir tris būtinas naujos vietos sąlygas. Per pirmą pokalbį su potencialiu darbdaviu paprašyk konkrečių pavyzdžių apie darbo krūvį, vadovavimo stilių ir augimo galimybes.",
+        "caution": "Nepainiok migloto nerimo su patikimu ženklu, kad privalai išeiti, ir neidealizuok naujos vietos. Kortos negarantuoja nei tinkamo pasiūlymo rudenį, nei geresnės savijautos pakeitus darbą.",
+        "followups": [
+          "Kas labiausiai skatina mane palikti dabartinį darbą?",
+          "Kokios darbo aplinkos man dabar reikia?",
+          "Ką verta išsiaiškinti prieš priimant pasiūlymą?"
+        ]
+      }
+    },
+    {
+      "id": "Q08",
+      "category": "darbas",
+      "ok": true,
+      "reading": {
+        "direct": "Pokalbiui dėl paaukštinimo ruoškis aiškiai parodydamas, ką jau užbaigei, kokią atsakomybę gali perimti ir kokio sprendimo prašai. Šios kortos siūlo mažiau remtis vien entuziazmu ar didelėmis vizijomis, o daugiau – konkrečiais pasiekimais ir apibrėžtu artimiausiu žingsniu.",
+        "story": "Dabartinės situacijos pozicijoje apverstas Pasaulis gali rodyti neužbaigtumo jausmą: gal jau dirbi aukštesniu lygiu, tačiau tavo indėlis dar nėra aiškiai apibendrintas ar pripažintas. Pasitikrink, ar liko neužbaigtų darbų, apie kuriuos vadovas galėtų paklausti. Kliūties pozicijoje tiesus Lazdų Tūzas išryškina iniciatyvą, kuri gali užgožti įrodymus: naujų idėjų gausa savaime dar neparodo pasirengimo aukštesnėms pareigoms. Patarimo pozicijoje apverstas Lazdų Dvejetas kviečia pastebėti dvejones arba pernelyg platų planą ir susiaurinti pasirinkimą. Kartu kortos siūlo pereiti nuo „noriu daugiau“ prie „štai ką jau sukūriau ir už ką esu pasirengęs atsakyti“.",
+        "next": "Paruošk vieno puslapio santrauką: trys pasiekimai su matomais rezultatais, pageidaujamos pareigos ir dvi papildomos atsakomybės, kurias galėtum prisiimti. Garsiai parepetuok dviejų minučių pristatymą. Pokalbio pabaigai pasiruošk klausimą: „Kokius konkrečius kriterijus turėčiau atitikti ir kada galėtume grįžti prie sprendimo?“",
+        "caution": "Nežadėk daugiau, nei realiai gali įgyvendinti, ir nepaversk pokalbio vien naujų idėjų pristatymu. Kortos neatskleidžia vadovo sprendimo – jį verta aiškintis tiesiogiai.",
+        "followups": [
+          "Kokius pasiekimus labiausiai akcentuoti?",
+          "Kaip reaguoti į vadovo abejones?",
+          "Kas trukdo aiškiai paprašyti paaukštinimo?"
+        ]
+      }
+    },
+    {
+      "id": "Q09",
+      "category": "darbas",
+      "ok": true,
+      "reading": {
+        "direct": "Pagal šias kortas tavo kūrybinei veiklai augti gali trukdyti ne idėjų stoka, o atotrūkis tarp plačių užmojų ir nestabilios kasdienės atramos. Augimo galimybė siejasi su pasirengimu rodyti dar neidealų darbą, priimti skirtingas nuomones ir išbandyti savo idėjas praktiškai.",
+        "story": "Dabartinės situacijos pozicijoje tiesus Lazdų Trejetas rodo žvilgsnį į ateitį: norą plėsti kūrybos ribas, pasiekti naują auditoriją ar užmegzti bendradarbiavimą. Tačiau gali būti daugiau žvalgymosi į galimybes nei nuoseklaus jų įgyvendinimo. Kliūties pozicijoje apverstas Lazdų Ketvertas siūlo pasitikrinti kūrybos pagrindą: ar turi pastovų laiką, tinkamą erdvę ir palaikančių žmonių? Jis taip pat gali atspindėti sunkumą pripažinti mažus pasiekimus, todėl veikla nesuteikia pakankamai pasitenkinimo. Patarimo pozicijoje tiesus Lazdų Penketas kviečia nevengti kūrybinės trinties: diskusijų, iššūkių ir konstruktyvios konkurencijos. Visos trys Lazdų kortos pabrėžia, kad įkvėpimą verta paversti reguliariu veiksmu, o skirtumus – medžiaga tobulėjimui.",
+        "next": "Šią savaitę pasirink vieną nedidelį kūrinį, skirk jam du konkrečius darbo laikus ir parodyk jį dviem žmonėms. Paklausk: „Kas čia labiausiai veikia, o ką verta sustiprinti?“ Pagal atsakymus išbandyk vieną pakeitimą.",
+        "caution": "Nepaversk grįžtamojo ryšio varžybomis dėl savo vertės. Naudinga trintis padeda kūriniui augti; nuolatinis lyginimasis ir bandymas įtikti visiems gali išsklaidyti tavo kryptį.",
+        "followups": [
+          "Kokios atramos mano kūrybai labiausiai trūksta?",
+          "Kaip drąsiau parodyti nebaigtą darbą?",
+          "Koks kūrybinis iššūkis padėtų man augti?"
+        ]
+      }
+    },
+    {
+      "id": "Q10",
+      "category": "darbas",
+      "ok": true,
+      "reading": {
+        "direct": "Į nuolatinę vadovo kritiką verta reaguoti ramiai: paprašyti konkrečių pavyzdžių ir aiškių lūkesčių, o ne iškart gintis. Šios kortos siūlo saugoti savo profesinį orumą, tačiau neskubėti atsakyti, kai kritika sukelia stiprias emocijas.",
+        "story": "Dabartinės situacijos pozicijoje apverstas Lazdų Šešetas gali atspindėti pripažinimo stoką: pastangos lieka nepastebėtos, o vadovo pastabos ima veikti pasitikėjimą savimi. Kliūties pozicijoje tiesus Lazdų Septynetas rodo poreikį apginti savo poziciją, bet kartu perspėja apie varginantį nuolatinės gynybos režimą — ne kiekvieną pastabą būtina paversti ginču. Patarimo pozicijoje apverstas Lazdų Aštuonetas kviečia sulėtinti bendravimą, išsiaiškinti neaiškius reikalavimus ir vengti skubotų žinučių. Kartu kortos siūlo pereiti nuo kovos dėl pripažinimo prie konkretaus pokalbio apie darbo kokybės kriterijus.",
+        "next": "Per kitą pokalbį pasakyk: „Noriu suprasti, ką turėčiau pakeisti. Gal galite pateikti konkretų pavyzdį ir įvardyti, kaip atrodytų tinkamai atliktas darbas?“ Susitarkite dėl vieno ar dviejų aiškių prioritetų ir po pokalbio trumpai juos apibendrink raštu.",
+        "caution": "Atskirk dalykinę pastabą nuo asmeninio menkinimo. Kortos neatskleidžia vadovo ketinimų, todėl nepriimk jų kaip įrodymo, kad jis nusiteikęs prieš tave. Jei kritika tampa žeminanti, ramus atsakas nereiškia pareigos ją tyliai toleruoti.",
+        "followups": [
+          "Kaip ramiai nustatyti ribas vadovui?",
+          "Kaip atskirti naudingą kritiką nuo menkinimo?",
+          "Kas padėtų atkurti pasitikėjimą savo darbu?"
+        ]
+      }
+    },
+    {
+      "id": "Q11",
+      "category": "darbas",
+      "ok": true,
+      "reading": {
+        "direct": "Kortų simbolika labiau palaiko savarankiškos veiklos idėjos išbandymą nei laukimą, kol klientai atsiras savaime. Vis dėlto tai nėra raginimas iškart įsipareigoti visapusiškai: klientų dar neturint, svarbiausia patikrinti susidomėjimą savo pasiūlymu ir neapsikrauti per daug.",
+        "story": "Dabartinėje situacijoje tiesus Lazdų Devynetas rodo atkaklumą, bet ir atsargumą: gali norėti pradėti, kartu baimindamasis, kiek jėgų pareikalaus klientų paieška. Kliūties pozicijoje apverstas Lazdų Dešimtukas išryškina sunkumą atsisakyti perteklinės naštos arba norą nuo jos pabėgti. Savarankiška veikla savaime nebūtinai reikštų mažiau atsakomybės, ypač jei viską mėgintum atlikti vienas. Patarimo pozicijoje tiesus Lazdų Pažas kviečia veikti smalsiai ir mokytis per nedidelius bandymus: aiškiai pristatyti idėją, kalbėtis su potencialiais klientais ir stebėti reakcijas. Kartu kortos siūlo ne įrodinėti savo ištvermę, o ieškoti praktiško ryšio tarp tavo entuziazmo ir žmonių poreikių.",
+        "next": "Vienu sakiniu aprašyk, kam ir kokią problemą padėtum spręsti. Pasikalbėk su trimis potencialiais klientais: paklausk, kaip jie šią problemą sprendžia dabar ir kas tavo pasiūlyme jiems būtų aktualu.",
+        "caution": "Nepainiok mandagaus palaikymo su realiu poreikiu. Kortos negali patvirtinti būsimos paklausos, o entuziazmas neturėtų užgožti tavo jėgų ribų.",
+        "followups": [
+          "Kas labiausiai stabdo mano pirmą žingsnį?",
+          "Kaip aiškiau pristatyti savo pasiūlymą?",
+          "Kokios naštos verta atsisakyti pradžioje?"
+        ]
+      }
+    },
+    {
+      "id": "Q12",
+      "category": "darbas",
+      "ok": true,
+      "reading": {
+        "direct": "Prieš grįžtant į ankstesnę darbovietę svarbu įvertinti, ar pasikeitė priežastys, dėl kurių išėjai, ir ar sugrįžimą skatina aiškus noras, o ne dabartinis nepasitenkinimas. Kortos kviečia ypač atidžiai pažvelgti į vadovavimo stilių, tavo savarankiškumą ir lūkesčius dėl vaidmens komandoje.",
+        "story": "Dabartinės situacijos pozicijoje apverstas Lazdų Riteris gali rodyti nekantrumą, blaškymąsi arba norą greitai pakeisti padėtį: pažįstama darbovietė gali atrodyti patrauklesnė, nei yra iš tikrųjų. Kliūties pozicijoje tiesi Lazdų Karalienė iškelia pasitikėjimo savimi ir matomumo temą. Verta paklausti, ar ten turėsi erdvės iniciatyvai, ar jausi poreikį nuolat įrodinėti savo vertę; ši korta taip pat gali simbolizuoti įtakingą, ryškią asmenybę komandoje, nebūtinai moterį. Patarimo pozicijoje apverstas Lazdų Karalius ragina kritiškai įvertinti autoritetą ir kontrolę: ar vadovų pažadai dera su elgesiu, ar atsakomybę lydės reali sprendimų laisvė. Visos trys Lazdų kortos pabrėžia motyvaciją ir ambicijas, tačiau vien entuziazmo grįžimui nepakanka.",
+        "next": "Užrašyk tris svarbiausias išėjimo priežastis. Pokalbyje apie sugrįžimą prie kiekvienos paprašyk konkretaus pavyzdžio, kas pasikeitė, ir aptark būsimas atsakomybes bei savarankiškumo ribas.",
+        "caution": "Nepainiok šilto priėmimo su pasikeitusia darbo kultūra. Kortos nėra įrodymas apie konkrečių žmonių ketinimus — remkis ir patikrinamais faktais.",
+        "followups": [
+          "Kas mane iš tikrųjų traukia sugrįžti?",
+          "Kokios senos problemos galėtų pasikartoti?",
+          "Kokių sąlygų man reikia, kad grįžimas būtų prasmingas?"
+        ]
+      }
+    },
+    {
+      "id": "Q13",
+      "category": "pinigai",
+      "ok": true,
+      "reading": {
+        "direct": "Kortos leidžia svarstyti, kad išlaidų plano sunku laikytis todėl, jog pirkiniai tau gali reikšti ne vien daiktus, bet ir emocinį pasitenkinimą, artumą ar progą save pradžiuginti. Kliūtis galėtų būti neatitikimas tarp tavo tikrųjų poreikių ir to, kam pritari norėdamas palaikyti ryšį su kitais.",
+        "story": "Dabartinės situacijos pozicijoje tiesi Taurių Tūzo korta išryškina jausmus ir naujų patirčių trauką: spontaniškas noras pasijusti geriau gali nusverti iš anksto numatytas ribas. Kliūties pozicijoje apverstas Taurių Dvejetas simbolizuoja nesuderintus lūkesčius – galbūt sunku atsisakyti bendrų planų arba atskirti savo norą nuo noro įtikti. Patarimo pozicijoje tiesias Taurių Trejetas kviečia ieškoti bendrystės ir palaikymo, o ne vien griežčiau save kontroliuoti. Visos trys Taurių kortos siūlo pirmiausia patyrinėti emocinę ir santykių pusę, užuot sunkumą laikius vien valios stoka.",
+        "next": "Prisimink vieną neseną nukrypimą nuo išlaidų plano ir užrašyk: ką tuo metu jautei, su kuo buvai ir ko iš tiesų norėjosi. Jei išryškės bendravimo tema, aptark su artimu žmogumi, kaip kartu leisti laiką nejaučiant spaudimo išlaidauti.",
+        "caution": "Nelaikyk šio skaitymo įrodymu, kad kalti tavo santykiai ar emocijos. Kortos yra savirefleksijos priemonė; pats planas taip pat gali neatitikti kasdienybės.",
+        "followups": [
+          "Kokį jausmą bandau patenkinti pirkdamas?",
+          "Kada kitų lūkesčiai nusveria mano ribas?",
+          "Kokio palaikymo man trūksta?"
+        ]
+      }
+    },
+    {
+      "id": "Q14",
+      "category": "pinigai",
+      "ok": true,
+      "reading": {
+        "direct": "Prieš skolindamas pinigus artimajam, apmąstyk, ar noras padėti kyla iš laisvo pasirinkimo, ar iš kaltės, gailesčio ir bendros praeities. Šios kortos kviečia įvertinti, kaip neįgyvendinti lūkesčiai galėtų paveikti jūsų ryšį ir tavo emocines ribas; jos negarantuoja, ar pinigai bus grąžinti.",
+        "story": "Dabartinės situacijos pozicijoje apverstas Taurių Ketvertas gali rodyti išėjimą iš dvejonių ir didesnį atvirumą artimojo prašymui. Vis dėlto verta pastebėti, ar neskubi sutikti vien tam, kad nebejaustum vidinio nepatogumo. Kliūties pozicijoje tiesus Taurių Penketas išryškina nusivylimo, netekties ar ankstesnių skaudžių patirčių temą: baimė nuvilti artimąjį gali konkuruoti su baime pačiam nusivilti. Patarimo pozicijoje apverstas Taurių Šešetas siūlo atsitraukti nuo idealizuotos praeities ir senų šeimos vaidmenų. Bendra istorija svarbi, tačiau ji nebūtinai atspindi dabartinį jūsų tarpusavio pasitikėjimą.",
+        "next": "Prieš atsakydamas užsirašyk: „Kodėl noriu padėti?“, „Ko tikiuosi mainais emociškai?“ ir „Kaip jausčiausi, jei susitarimas liktų neįvykdytas?“ Tuomet ramiai aptarkite, ką ši pagalba kiekvienam reikštų jūsų santykiui.",
+        "caution": "Saugokis minties, kad artumas įpareigoja sutikti arba kad atsisakymas savaime reiškia meilės stoką. Kortas vertink kaip savirefleksijos priemonę, o ne artimojo patikimumo ar būsimo grąžinimo įrodymą.",
+        "followups": [
+          "Kokį seną šeimos vaidmenį čia kartoju?",
+          "Kaip atskirti atjautą nuo kaltės?",
+          "Kaip apie ribas kalbėti išsaugant artumą?"
+        ]
+      }
+    },
+    {
+      "id": "Q15",
+      "category": "pinigai",
+      "ok": true,
+      "reading": {
+        "direct": "Kai pajamos nepastovios, kortos kviečia atskirti tikrąjį neapibrėžtumą nuo daugybės galvoje kuriamų grėsmingų scenarijų. Baimę gali padėti suvaldyti ne bandymas numatyti viską, o dėmesys tam, ką šiandien gali pasirinkti ir kas suteikia atramos nepriklausomai nuo pajamų svyravimų.",
+        "story": "Dabartinės situacijos pozicijoje tiesus Taurių Septynetas simbolizuoja gausybę galimybių ir spėlionių: nežinant būsimų pajamų, gali būti sunku atskirti faktus nuo „o jeigu“ minčių. Kliūties pozicijoje apverstas Taurių Aštuonetas rodo galimą įstrigimą — norą paleisti varginantį nerimavimą, bet kartu baimę atsisakyti tariamos kontrolės, kurią jis suteikia. Patarimo pozicijoje tiesus Taurių Devynetas kviečia sąmoningai pastebėti, kas jau teikia pasitenkinimo ir saugumo pojūtį: ryšius, gebėjimus, kasdienius ritualus. Kartu kortos siūlo judėti nuo bauginančių scenarijų prie apčiuopiamos dabarties, neneigiant realaus pajamų nepastovumo.",
+        "next": "Kai kitą kartą sustiprės baimė, užrašyk tris eilutes: „Ką tikrai žinau apie dabartinę situaciją?“, „Ką tik spėju?“, „Kas šiandien man suteiktų atramos?“ Tuomet pasirink vieną paprastą veiksmą iš paskutinės eilutės, pavyzdžiui, pokalbį su artimu žmogumi.",
+        "caution": "Taurių Devynetas nėra pažadas, kad pajamos stabilizuosis. Dėkingumas neturėtų tapti spaudimu jaustis gerai ar priežastimi ignoruoti pagrįstą susirūpinimą.",
+        "followups": [
+          "Kokį baimės scenarijų man sunkiausia paleisti?",
+          "Kur ieškoti atramos, kai pajamos svyruoja?",
+          "Kaip atskirti pasiruošimą nuo nuolatinio nerimavimo?"
+        ]
+      }
+    },
+    {
+      "id": "Q16",
+      "category": "pinigai",
+      "ok": true,
+      "reading": {
+        "direct": "Šios kortos siūlo į pirkimą patiriant stresą pažvelgti kaip į galimą bandymą susikurti emocinį jaukumą, kurio tuo metu trūksta. Svarbiausia čia gali būti ne pats daiktas, o pažadas, kad jį įsigijus pasijusi ramiau, maloniau ar labiau vertinamas.",
+        "story": "Dabartinėje situacijoje apverstas Taurių Dešimtukas gali simbolizuoti atotrūkį tarp trokštamos gerovės ir tikros savijautos: pirkinys trumpam priartina prie vaizdinio, kaip „turėtų“ atrodyti laimingas gyvenimas. Kliūties pozicijoje tiesus Taurių Pažas rodo jautrumą ir naujumo žavesį – patiriant stresą gražus daiktas gali tapti lengvai pasiekiamu džiaugsmo pažadu. Šis jautrumas nėra trūkumas, tačiau gali būti sunku atskirti emocinį poreikį nuo noro kažką įsigyti. Patarimo pozicijoje apverstas Taurių Riteris kviečia pastebėti, kada pirkinį romantizuoji ar tikiesi, kad jis pakeis tavo vidinę būseną. Visos trys Taurių kortos nukreipia dėmesį į jausmus, slypinčius už šio įpročio.",
+        "next": "Kitą kartą pajutęs norą pirkti dėl streso, trumpam sustok ir užrašyk: „Ką dabar jaučiu? Ką šis pirkinys žada? Ko man iš tiesų reikia?“ Tuomet išbandyk vieną tą poreikį atliepiantį veiksmą, pavyzdžiui, pokalbį ar ramią pertrauką, ir stebėk, ar noras pasikeičia.",
+        "caution": "Nepaversk šio stebėjimo savęs kaltinimu. Kortos yra apmąstymo priemonė, o ne įrodymas, kodėl perki; ne kiekvienas malonus pirkinys reiškia emocijų vengimą.",
+        "followups": [
+          "Kokie jausmai dažniausiai sužadina norą pirkti?",
+          "Kokį pažadą man simbolizuoja pirkiniai?",
+          "Kaip galėčiau kitaip susikurti jaukumo?"
+        ]
+      }
+    },
+    {
+      "id": "Q17",
+      "category": "pinigai",
+      "ok": true,
+      "reading": {
+        "direct": "Savo veiklos kainodaroje verta peržiūrėti, kiek kainą lemia noras suprasti klientą, išvengti jo nusivylimo ar išsaugoti gerą santykį. Kortos kviečia atpažinti emocines išimtis ir aiškiau įvardyti, kuo grindžiate savo pasiūlymo vertę – tai simbolinė refleksija, o ne finansinė rekomendacija.",
+        "story": "Dabartinės situacijos pozicijoje tiesi Taurių Karalienė rodo empatiją: galite puikiai jausti klientų poreikius, tačiau verta pasitikrinti, ar rūpestingumas nevirsta neįvardytu papildomu darbu arba nuolaidomis iš gailesčio. Kliūties pozicijoje apverstas Taurių Karalius siūlo pažvelgti į emocinį nepastovumą: ar kainos aptarimą veikia kliento spaudimas, jūsų nuotaika, kaltė arba atmetimo baimė? Tai nebūtinai sąmoningas elgesys – kartais tiesiog sunku išlaikyti ribas. Patarimo pozicijoje tiesus Kalavijų Tūzas simbolizuoja aiškumą: atskirti norą padėti nuo susitarimo sąlygų, tiksliai nusakyti darbų apimtį ir pastebėti savo sprendimų prieštaravimus. Kartu kortos ragina ne atsisakyti empatijos, o suteikti jai aiškias ribas.",
+        "next": "Peržvelkite tris paskutinius kainos aptarimus. Prie kiekvieno užrašykite: ką pažadėjote, ar keitėte pradinį pasiūlymą ir kokia emocija tuo metu veikė. Ieškokite pasikartojančio įpročio, ne „teisingos“ sumos.",
+        "caution": "Nelaikykite kiekvienos nuolaidos silpnumu ar kiekvieno kliento klausimo spaudimu. Svarbiausia atskirti sąmoningą lankstumą nuo automatinio nusileidimo.",
+        "followups": [
+          "Kokios emocijos veikia mano kainos aptarimą?",
+          "Kur neaiškiai apibrėžiu darbų apimtį?",
+          "Kas man trukdo ramiai įvardyti savo vertę?"
+        ]
+      }
+    },
+    {
+      "id": "Q18",
+      "category": "pinigai",
+      "ok": true,
+      "reading": {
+        "direct": "Kortų simbolika leidžia manyti, kad skubėjimas daugiau uždirbti gali trukdyti tau ramiai pasverti pasirinkimus: noras greičiau panaikinti neapibrėžtumą gali nustelbti apgalvojimą. Čia svarbu atskirti siekį uždirbti daugiau nuo spaudimo kuo greičiau atsikratyti nemalonaus jausmo.",
+        "story": "Dabartinėje situacijoje apverstas Kalavijų Dvejetas rodo galimą blaškymąsi ar informacijos perteklių: užsitęsusi dvejonė gali staiga virsti skubotu pasirinkimu. Kliūties pozicijoje tiesus Kalavijų Trejetas iškelia nusivylimą, skaudų palyginimą su kitais ar ankstesnę nesėkmę — verta patikrinti, ar noru daugiau uždirbti nesieki kompensuoti tokio išgyvenimo. Patarimo pozicijoje apverstas Kalavijų Ketvertas atkreipia dėmesį į nerimastingą veikimą ir sunkumą sustoti: judėti pirmyn naudinga tuomet, kai pauzė iš tiesų padeda susigrąžinti aiškumą. Visos trys Kalavijų kortos pabrėžia minčių įtampą, o ne paties uždarbio tikslo netinkamumą.",
+        "next": "Prieš kitą sprendimą, susijusį su didesnio uždarbio siekiu, trumpai užrašyk: „Ką tikrai žinau?“, „Ko dar nežinau?“ ir „Kokį jausmą bandau nuslopinti skubėdamas?“ Taip aiškiau atskirsi faktus nuo vidinio spaudimo.",
+        "caution": "Saugokis minties, kad greitas sprendimas savaime yra pažanga. Kortos nėra tavo finansinės padėties ar sprendimų kokybės įrodymas — jų interpretaciją tikrink pagal konkrečius savo elgesio pavyzdžius.",
+        "followups": [
+          "Kas labiausiai kursto mano skubėjimą?",
+          "Kaip atskirti ryžtą nuo impulsyvumo?",
+          "Kas padėtų man spręsti ramiau?"
+        ]
+      }
+    },
+    {
+      "id": "Q19",
+      "category": "pasirinkimai",
+      "ok": true,
+      "reading": {
+        "direct": "Šis išdėstymas labiau kviečia ruoštis pokyčiui nei likti dabartiniame mieste vien iš inercijos, tačiau nerodo, kad artumas šeimai savaime išspręs įtampą. Kraustymąsi verta svarstyti, jei jis suteiktų tikros kasdienės paramos ir leistų išlaikyti savarankiškumą, o ne būtų vien pabėgimas nuo dabartinių sunkumų.",
+        "story": "Dabartinės situacijos pozicijoje tiesus Kalavijų Penketas gali rodyti konfliktų, konkurencijos ar nuolatinių kompromisų nuovargį: svarbu įvardyti, kas konkrečiai dabartiniame mieste sekina. Kliūties pozicijoje apverstas Kalavijų Šešetas simbolizuoja užstrigusį perėjimą – galbūt norisi išvykti, bet stabdo prisirišimas, neaiškumas arba baimė tuos pačius sunkumus nusivežti kartu. Patarimo pozicijoje tiesus Kalavijų Septynetas siūlo strategiją ir savarankišką sprendimą, ne apgaulę: pirmiausia susidėlioti realų planą, užuot rinkusis pagal aplinkinių spaudimą. Kartu kortos pabrėžia, kad svarbu ne tik kur gyventi, bet ir kokius santykių modelius bei ribas išsaugosite.",
+        "next": "Jei įmanoma, suplanuokite trumpą bandomąją viešnagę arčiau šeimos, kuo panašesnę į įprastą kasdienybę. Iš anksto aptarkite bendravimo dažnį, abipusius lūkesčius ir asmeninę erdvę; po viešnagės palyginkite savijautą su gyvenimu dabartiniame mieste.",
+        "caution": "Nesupainiokite palengvėjimo išvykus su ilgalaikiu tinkamumu. Septyneto siūlomas apdairumas neturėtų virsti nutylėjimais žmonėms, kuriuos kraustymasis tiesiogiai paveiktų.",
+        "followups": [
+          "Kas mane iš tikrųjų laiko dabartiniame mieste?",
+          "Kokių ribų reikėtų gyvenant arčiau šeimos?",
+          "Ką turėčiau išspręsti prieš kraustydamasis?"
+        ]
+      }
+    },
+    {
+      "id": "Q20",
+      "category": "pasirinkimai",
+      "ok": true,
+      "reading": {
+        "direct": "Renkantis tarp dviejų įdomių mokymų, kortos siūlo mažiau ieškoti „vienintelio teisingo“ varianto ir daugiau vertinti, kuris atitinka tavo dabartinį tikslą bei jėgas. Jos neišskiria konkrečių mokymų kaip geresnių – veikiau kviečia atskirti tikrą susidomėjimą nuo baimės pasirinkus kažką prarasti.",
+        "story": "Dabartinės situacijos pozicijoje apverstas Kalavijų Aštuonetas rodo galimybę išsilaisvinti iš minties, kad esi įstrigęs tarp dviejų vienodai būtinų pasirinkimų: gali pats nusistatyti atrankos kriterijus. Kliūties pozicijoje tiesus Kalavijų Devynetas perspėja apie perdėtą svarstymą ir nerimą, kad pasirinkimas nuvils arba kiti mokymai bus vertingesni. Patarimo pozicijoje apverstas Kalavijų Dešimtukas kviečia nebekartoti išsekinančio modelio: nesirink vien tam, kad kažką sau įrodytum ar kompensuotum ankstesnį nusivylimą. Visos trys Kalavijų kortos pabrėžia mąstymo įtampą – daugiau analizės nebūtinai suteiks daugiau aiškumo.",
+        "next": "Užrašyk vieną konkretų gebėjimą, kurį nori įgyti. Tuomet abu mokymus palygink pagal tris dalykus: praktikos kiekį, grįžtamąjį ryšį ir suderinamumą su tavo laiku. Jei trūksta informacijos, paprašyk pavyzdinės pamokos ar užduoties; tada nusistatyk sprendimo datą.",
+        "caution": "Nepainiok nerimo su įrodymu, kad mokymai netinka. Tačiau neignoruok ir realaus krūvio: įdomesnė programa nebūtinai šiuo metu bus tinkamesnė.",
+        "followups": [
+          "Kuris pasirinkimas labiau atitinka mano tikslą?",
+          "Ko bijau atsisakydamas kitų mokymų?",
+          "Kokio mokymosi modelio verta nebekartoti?"
+        ]
+      }
+    },
+    {
+      "id": "Q21",
+      "category": "pasirinkimai",
+      "ok": true,
+      "reading": {
+        "direct": "Kortos labiau siūlo ne iškart atsisakyti projekto, o tęsti jį ribotą laiką, aiškiai patikrinant jo perspektyvumą. Jau skirtas laikas neturėtų būti pagrindinis argumentas: svarbiau, ar projektas tebėra prasmingas ir ar gali įvardyti pasiekiamą artimiausią rezultatą.",
+        "story": "Dabartinės situacijos pozicijoje tiesus Kalavijų Pažas rodo smalsumą, idėjas ir poreikį surinkti daugiau faktų: projektas dar gali turėti neišnaudotų galimybių, tačiau jas verta patikrinti. Kliūties pozicijoje apverstas Kalavijų Riteris perspėja apie skubėjimą, blaškymąsi ar norą jėga išgauti rezultatą. Tai gali reikšti, kad stringa ne pati idėja, o pasirinktas darbo tempas ir kryptis. Patarimo pozicijoje tiesi Kalavijų Karalienė kviečia blaiviai atsirinkti, kas veikia, atsisakyti perteklinių užmojų ir nusistatyti ribas. Visos trys Kalavijų kortos pabrėžia aiškumo ir kritinio vertinimo svarbą, o ne atkaklumą bet kokia kaina.",
+        "next": "Pasirink vieną svarbiausią projekto prielaidą ir skirk dvi savaites jai patikrinti nedideliu bandymu. Iš anksto užrašyk, koks konkretus rezultatas reikštų „tęsiu“, o koks – „keičiu kryptį arba sustoju“.",
+        "caution": "Saugokis minties „per daug įdėjau, kad sustočiau“, bet ir nenutrauk projekto vien dėl laikino susierzinimo. Kortos yra apmąstymo priemonė, ne projekto sėkmės įrodymas.",
+        "followups": [
+          "Kurią projekto dalį verta išsaugoti?",
+          "Kas labiausiai stabdo mano pažangą?",
+          "Kaip atskirti atkaklumą nuo užsispyrimo?"
+        ]
+      }
+    },
+    {
+      "id": "Q22",
+      "category": "pasirinkimai",
+      "ok": true,
+      "reading": {
+        "direct": "Prieš priimant bendradarbiavimo pasiūlymą svarbu atskirti jo patrauklumą nuo to, kiek aiškiai sutarsite dėl atsakomybių, sprendimų ir darbo krūvio. Kortos siūlo neskubėti: galimybė gali būti vertinga, tačiau verta išsiaiškinti bendravimo sąlygas ir įvertinti, ar turėsi jai pakankamai laiko.",
+        "story": "Dabartinės situacijos pozicijoje apverstas Kalavijų Karalius kelia klausimą, ar pasiūlymas pristatomas aiškiai ir ar abiem pusėms bus vietos išsakyti savo nuomonę. Tai gali simbolizuoti vienašališką sprendimų priėmimą arba tavo paties sunkumą blaiviai įvertinti įtikinamus argumentus. Kliūties pozicijoje tiesus Pentaklių Tūzas rodo apčiuopiamą potencialą, kuris savo patrauklumu gali užgožti praktinius klausimus: galimybė dar nėra įgyvendintas rezultatas. Patarimo pozicijoje apverstas Pentaklių Dvejetas kviečia mažinti vienu metu prisiimamų užduočių skaičių ir nebandyti naujo bendradarbiavimo sutalpinti į jau perpildytą dienotvarkę. Kartu kortos pabrėžia aiškumo ir realių pajėgumų svarbą.",
+        "next": "Prieš atsakydamas pasiūlyk pokalbį ir išsiaiškink keturis dalykus: tavo užduotis, numatomą laiko poreikį, kas priims sprendimus ir kaip aptarsite nesutarimus. Tada įvardyk sau, ko turėtum atsisakyti, kad galėtum įsitraukti.",
+        "caution": "Vien dėl kortų nelaikyk pasiūlymo teikėjo nesąžiningu. Stebėk konkrečius ženklus: miglotus atsakymus, spaudimą skubėti ar nenorą aptarti tavo ribų.",
+        "followups": [
+          "Kokias ribas verta nusistatyti?",
+          "Ko šiame pasiūlyme dar nepastebiu?",
+          "Koks bendradarbiavimo formatas man tiktų?"
+        ]
+      }
+    },
+    {
+      "id": "Q23",
+      "category": "pasirinkimai",
+      "ok": true,
+      "reading": {
+        "direct": "Šiame pasirinkime intuiciją nuo baimės gali padėti atskirti tai, ar tavo nuojauta išlieka patikrinus faktus ir pasitarus, ar ją daugiausia kursto mintis ką nors prarasti. Kortos siūlo intuiciją tikrinti per konkrečią patirtį ir palaikymą, o ne vien per jausmo stiprumą.",
+        "story": "Dabartinėje situacijoje tiesus Pentaklių Trejetas pabrėžia bendradarbiavimą ir kompetenciją: tavo vidinis žinojimas gali aiškėti kalbantis su žmogumi, kuris supranta šio pasirinkimo aplinkybes. Kliūties pozicijoje apverstas Pentaklių Ketvertas gali rodyti svyravimą tarp įsikibimo į saugumą ir noro staiga viską paleisti. Abu impulsai gali kilti iš baimės, todėl nei pasilikimas, nei pasitraukimas savaime nėra intuicijos įrodymas. Patarimo pozicijoje tiesus Pentaklių Penketas kviečia pripažinti pažeidžiamumą: ko bijai netekti ir kokios pagalbos tau trūksta? Kartu kortos siūlo sprendimo negrįsti nei kontrolės poreikiu, nei vienatvės ar stokos jausmu.",
+        "next": "Užrašyk du sakinius: „Jaučiu, kad man tinka…, nes…“ ir „Bijau, kad nutiks…“. Prie kiekvieno pažymėk faktus bei spėjimus. Aptark juos su patikimu, situaciją išmanančiu žmogumi ir, jei įmanoma, išbandyk mažą, grįžtamą žingsnį.",
+        "caution": "Ramybė ne visada reiškia intuiciją, o nerimas ne visada reiškia klaidingą pasirinkimą. Pentaklių Penketas čia nėra raginimas rinktis kančią; kortas naudok kaip apmąstymo priemonę, ne įrodymą.",
+        "followups": [
+          "Kokio praradimo šiame pasirinkime labiausiai bijau?",
+          "Kieno požiūris padėtų patikrinti mano nuojautą?",
+          "Koks mažas bandymas suteiktų daugiau aiškumo?"
+        ]
+      }
+    },
+    {
+      "id": "Q24",
+      "category": "pasirinkimai",
+      "ok": true,
+      "reading": {
+        "direct": "Kortos labiau siūlo pirmiausia aiškiai užbaigti arba apriboti senąją veiklą, o naująją kol kas tik nedideliu mastu išbandyti. Tai nėra raginimas senąją tęsti bet kokia kaina: svarbu atskirti prasmingą užbaigimą nuo darbo, kurį palaiko vien įprotis ar jau įdėtos pastangos.",
+        "story": "Dabartinėje situacijoje apverstas Pentaklių Šešetas rodo galimą neatitikimą tarp to, kiek atiduodi veiklai, ir kiek gauni atgal — dėmesio, pagalbos ar pasitenkinimo. Kliūties pozicijoje tiesus Pentaklių Septynetas išryškina laukimą ir rezultatų vertinimą: gali būti sunku pasitraukti, nes jau daug investuota pastangų, tačiau vien laukimas sprendimo neatstos. Patarimo pozicijoje apverstas Pentaklių Aštuonetas kviečia peržiūrėti darbo būdą ir atsisakyti mechaniško tobulinimo. Kartu šios kortos siūlo ne užsikrauti antrą pilną veiklą, o nuspręsti, ką senojoje verta užbaigti, ką nutraukti ir ką naujojoje išbandyti kitaip.",
+        "next": "Užrašyk tris dalykus: ką senojoje veikloje būtina užbaigti, ko nebetęsi ir kokiu vienu mažu bandymu patikrinsi naują kryptį. Nusistatyk konkrečią dieną šiems sprendimams peržiūrėti.",
+        "caution": "Nepasilik vien todėl, kad jau daug įdėjai, bet ir nepradėk naujos veiklos vien norėdamas pabėgti nuo nuovargio. Kortas vertink kaip apmąstymo priemonę, ne patvirtinimą, kad viena kryptis būtinai pasiseks.",
+        "followups": [
+          "Ką senojoje veikloje verta išsaugoti?",
+          "Kas mane traukia į naują veiklą?",
+          "Kaip atpažinti tinkamą perėjimo momentą?"
+        ]
+      }
+    },
+    {
+      "id": "Q25",
+      "category": "taip_ne",
+      "ok": true,
+      "reading": {
+        "direct": "TAIP – kortų simbolika palankesnė šią savaitę parašyti trumpą, ramų pranešimą žmogui, su kuriuo susipykai, nei laukti tobulo momento. Tai galimybė atverti pokalbį, o ne pažadas, kad susitaikysite ar iškart sulauksi atsakymo.",
+        "story": "Dabartinės situacijos pozicijoje tiesus Pentaklių Devynetas pabrėžia savivertę ir savarankiškumą: gali parodyti iniciatyvą neprarasdamas orumo ir nesiedamas savo vertės su atsakymu. Kliūties pozicijoje apverstas Pentaklių Dešimtukas rodo galimai susvyravusį tarpusavio saugumą, skirtingus lūkesčius ar įsisenėjusius nesutarimus – viena žinutė visko neišspręs. Patarimo pozicijoje tiesus Pentaklių Pažas skatina nedidelį, konkretų ir nuoširdų žingsnį bei pasirengimą išklausyti. Kartu kortos siūlo pradėti nuo paprasto kontakto, ne nuo reikalavimo atkurti ankstesnį artumą.",
+        "next": "Kai jausiesi ramiai, parašyk: „Norėčiau ramiai pasikalbėti apie mūsų nesutarimą ir išgirsti tavo pusę. Ar norėtum?“ Tuomet palik žmogui laiko atsakyti.",
+        "caution": "Jeigu žmogus aiškiai paprašė su juo nesusisiekti, gerbk šią ribą. Venk ilgo kaltinimų sąrašo, spaudimo atsakyti ir pakartotinių žinučių; tyla savaime neatskleidžia jo motyvų.",
+        "followups": [
+          "Koks žinutės tonas būtų tinkamiausias?",
+          "Ką verta pripažinti iš savo pusės?",
+          "Kaip pasiruošti galimam neatsakymui?"
+        ]
+      }
+    },
+    {
+      "id": "Q26",
+      "category": "taip_ne",
+      "ok": true,
+      "reading": {
+        "direct": "NE – kol darbo pasiūlyme neaiškios tavo pareigos. Kortų simbolika skatina neskubėti: pasiūlymą verta persvarstyti, jei darbdavys konkrečiai apibrėš atsakomybes, darbo krūvį ir tavo sprendimų ribas.",
+        "story": "Dabartinėje situacijoje apverstas Pentaklių Riteris gali rodyti stringantį procesą, neapibrėžtą kasdienį darbą arba riziką įstrigti užduotyse be aiškios krypties. Kliūties pozicijoje tiesi Pentaklių Karalienė išryškina stabilumo ir praktiškai patogios darbo aplinkos poreikį: pasiūlymo saugumo įspūdis gali skatinti nuvertinti pareigų miglotumą. Patarimo pozicijoje apverstas Pentaklių Karalius ragina kritiškai įvertinti vadovavimo stilių ir atsakomybės paskirstymą – ar nebūtų reikalaujama rezultatų nesuteikiant reikalingų išteklių bei įgaliojimų. Kartu šios kortos siūlo rinktis patikrinamas sąlygas, o ne vien patrauklų pasiūlymo įvaizdį.",
+        "next": "Prieš atsakydamas paprašyk raštu įvardyti penkias pagrindines pareigas, tiesioginį vadovą, pirmųjų trijų mėnesių sėkmės kriterijus ir papildomų užduočių derinimo tvarką. Pagal atsakymų konkretumą iš naujo įvertink pasiūlymą.",
+        "caution": "Atkreipk dėmesį, jei į konkrečius klausimus atsakoma tik „visi darome viską“ arba spaudžiama apsispręsti iškart. Kortos nėra įrodymas, kad darbdavys nepatikimas – svarbiausia jo atsakymai ir elgesys.",
+        "followups": [
+          "Ką dar turėčiau išsiaiškinti apie vadovą?",
+          "Kokia šio pasiūlymo galimybė man svarbiausia?",
+          "Kokias darbo ribas verta įvardyti?"
+        ]
+      }
+    },
+    {
+      "id": "Q27",
+      "category": "taip_ne",
+      "ok": true,
+      "reading": {
+        "direct": "TAIP – pagal šias kortas verta dar kartą bandyti po nesėkmės, tačiau ne kartoti tą patį būdą. Jos palankios naujai pradžiai, jei prieš veikdamas išsiaiškinsi, kas ankstesniame bandyme neveikė; tai nėra sėkmės garantija.",
+        "story": "Dabartinėje situacijoje tiesus Kvailys rodo galimybę pradėti iš naujo ir nesutapatinti vienos nesėkmės su savo gebėjimais. Kliūties pozicijoje apverstas Magas įspėja apie galimą atotrūkį tarp noro ir pasirengimo: gal trūko aiškaus metodo, įgūdžių pritaikymo ar pasitikėjimo savimi. Patarimo pozicijoje tiesi Žynė siūlo neskubėti įrodinėti, kad šįkart pavyks, o pirmiausia įsiklausyti į save ir pastebėti tai, ką anksčiau praleidai. Kartu kortos skatina bandyti iš naujo sąmoningiau, o ne vien drąsiau.",
+        "next": "Užrašyk vieną konkrečią ankstesnės nesėkmės priežastį ir vieną dalyką, kurį šįkart pakeisi. Tuomet pasirink mažą bandomąjį žingsnį, leidžiantį patikrinti naują būdą neprisiimant viso ankstesnio įsipareigojimo.",
+        "caution": "Nepainiok Kvailio atvirumo su neapgalvotu šuoliu, o Žynės intuicijos – su įrodymu, kad viskas pavyks. Apverstas Magas ragina atsargiai vertinti tiek savo, tiek kitų pažadus, jei jų nepalaiko konkretūs veiksmai.",
+        "followups": [
+          "Ką turėčiau pakeisti prieš bandydamas dar kartą?",
+          "Ko nepastebėjau per ankstesnį bandymą?",
+          "Kaip atskirti intuiciją nuo nesėkmės baimės?"
+        ]
+      }
+    },
+    {
+      "id": "Q28",
+      "category": "taip_ne",
+      "ok": true,
+      "reading": {
+        "direct": "NE – pagal šių kortų simboliką dabar palankiau planą peržiūrėti, o ne pradėti įgyvendinti visa apimtimi. Tai nėra garantuota nesėkmės prognozė: metas gali tapti tinkamesnis, jei pašalinsi pasirengimo spragas ir pasirinksi lankstesnį veikimo būdą.",
+        "story": "Dabartinės situacijos pozicijoje apversta Imperatorė rodo galimą brandos, energijos ar planui reikalingo palaikymo stoką: sumanymui dar gali reikėti priežiūros. Kliūties pozicijoje tiesus Imperatorius išryškina griežtą struktūrą, taisykles arba autoriteto reikalavimus, kurie šiuo metu riboja judėjimą. Patarimo pozicijoje apverstas Hierofantas kviečia patikrinti, ar nesilaikai įprasto kelio vien todėl, kad „taip reikia“, ir ieškoti savarankiško, nestandartinio sprendimo. Kartu kortos siūlo ne atsisakyti plano, o prieš startą pakeisti jo įgyvendinimo sąlygas.",
+        "next": "Įvardyk vieną dalyką, kurio planui labiausiai trūksta, ir vieną taisyklę ar prielaidą, kuri jį stabdo. Tuomet suplanuok nedidelį, grįžtamą bandymą, kad patikrintum alternatyvų kelią be viso masto įsipareigojimo.",
+        "caution": "Nepainiok savarankiškumo su maištu prieš bet kokią tvarką. Kortų interpretaciją laikyk apmąstymo priemone, o sprendimą dėl laiko grįsk ir realiu pasirengimu bei aplinkybėmis.",
+        "followups": [
+          "Ko mano planui dar trūksta?",
+          "Kokia kliūtis dabar svarbiausia?",
+          "Koks mažas bandymas padėtų įvertinti pasirengimą?"
+        ]
+      }
+    },
+    {
+      "id": "Q29",
+      "category": "taip_ne",
+      "ok": true,
+      "reading": {
+        "direct": "NE – kol nesutariate dėl atsakomybių, bendradarbiavimui dar nepritark. Kortų simbolika rodo bendro pasirinkimo potencialą, tačiau pirmiausia verta aiškiai sutarti, kas už ką atsako.",
+        "story": "Dabartinės situacijos pozicijoje tiesūs Įsimylėjėliai pabrėžia partnerystės galimybę ir būtinybę sąmoningai suderinti lūkesčius: vien noro dirbti kartu nepakanka. Kliūties pozicijoje apverstas Vežimas atspindi nesuderintą kryptį ir galimą kovą dėl kontrolės – neaiškios atsakomybės gali trukdyti veikti išvien. Patarimo pozicijoje tiesi Jėga kviečia ramiai, bet tvirtai įvardyti savo ribas, nei spaudžiant kitą, nei nusileidžiant vien dėl santarvės. Kartu kortos siūlo ne atmesti partnerystę visam laikui, o sustabdyti sprendimą iki aiškaus susitarimo.",
+        "next": "Pasiūlyk vieną pokalbį, per kurį raštu išvardytumėte užduotis, kiekvienos atsakingą žmogų ir sprendimų priėmimo tvarką. Tuomet iš naujo įvertink pasiūlymą.",
+        "caution": "Nepriimk pažado „eigoje susitvarkysime“ kaip atsakomybių susitarimo. Atkreipk dėmesį, ar tavo ribos išgirstamos, ar tikimasi, kad neapibrėžtus darbus perimsi tu.",
+        "followups": [
+          "Kokią ribą svarbiausia įvardyti?",
+          "Kas trukdo susitarti dėl atsakomybių?",
+          "Kokios sąlygos leistų persvarstyti atsakymą?"
+        ]
+      }
+    },
+    {
+      "id": "Q30",
+      "category": "taip_ne",
+      "ok": true,
+      "reading": {
+        "direct": "NE – pagal šių kortų simboliką šiandien skubėti priimti sprendimą nevertėtų. Apverstas Atsiskyrėlis rodo galimą vidinę sumaištį, tiesus Likimo ratas – kintančias aplinkybes, o apverstas Teisingumas pataria pirmiausia patikrinti, ar tavo vertinimas pakankamai pagrįstas ir nešališkas.",
+        "story": "Dabartinėje situacijoje apverstas Atsiskyrėlis gali reikšti, kad užsisukai savo mintyse arba sunku išgirsti savo tikruosius prioritetus: skuba nebūtinai suteiks aiškumo. Kliūties pozicijoje tiesus Likimo ratas pabrėžia pokyčius ir ne nuo tavęs priklausančius veiksnius, todėl šiandienos prielaidos gali keistis. Patarimo pozicijoje apverstas Teisingumas kviečia pastebėti trūkstamus faktus, šališkumą ar ne iki galo apsvarstytas pasekmes. Kartu kortos labiau palaiko sąmoningą pauzę nei impulsyvų pasirinkimą, tačiau ne begalinį atidėliojimą.",
+        "next": "Prieš apsispręsdamas užrašyk du pagrindinius variantus, svarbiausią kiekvieno pasekmę ir vieną trūkstamą faktą. Patikrink tą faktą ir tikrąjį sprendimo terminą; jei šiandien apsispręsti nebūtina, nusistatyk konkretų laiką grįžti prie klausimo.",
+        "caution": "Nepainiok nerimo ar aplinkinių spaudimo su tikra būtinybe skubėti. Kortos negarantuoja, kad laukimas pagerins rezultatą, todėl svarbu įvertinti ir delsimo pasekmes.",
+        "followups": [
+          "Kas mane labiausiai skatina skubėti?",
+          "Ko dar nežinau apie šį pasirinkimą?",
+          "Kaip atskirti naudingą pauzę nuo vengimo?"
+        ]
+      }
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 436,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 529,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 965,
+      "conservative_eur": 0.065835,
+      "accounted": true
+    },
+    {
+      "input_tokens": 439,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 571,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1010,
+      "conservative_eur": 0.069165,
+      "accounted": true
+    },
+    {
+      "input_tokens": 435,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 520,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 955,
+      "conservative_eur": 0.0651,
+      "accounted": true
+    },
+    {
+      "input_tokens": 446,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 556,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1002,
+      "conservative_eur": 0.06846,
+      "accounted": true
+    },
+    {
+      "input_tokens": 438,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 563,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1001,
+      "conservative_eur": 0.068505,
+      "accounted": true
+    },
+    {
+      "input_tokens": 442,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 566,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1008,
+      "conservative_eur": 0.06897,
+      "accounted": true
+    },
+    {
+      "input_tokens": 429,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 531,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 960,
+      "conservative_eur": 0.065565,
+      "accounted": true
+    },
+    {
+      "input_tokens": 444,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 578,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1022,
+      "conservative_eur": 0.06999,
+      "accounted": true
+    },
+    {
+      "input_tokens": 445,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 579,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1024,
+      "conservative_eur": 0.070125,
+      "accounted": true
+    },
+    {
+      "input_tokens": 450,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 531,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 981,
+      "conservative_eur": 0.066825,
+      "accounted": true
+    },
+    {
+      "input_tokens": 451,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 524,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 975,
+      "conservative_eur": 0.06636,
+      "accounted": true
+    },
+    {
+      "input_tokens": 455,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 575,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1030,
+      "conservative_eur": 0.070425,
+      "accounted": true
+    },
+    {
+      "input_tokens": 439,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 509,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 948,
+      "conservative_eur": 0.064515,
+      "accounted": true
+    },
+    {
+      "input_tokens": 446,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 547,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 993,
+      "conservative_eur": 0.067785,
+      "accounted": true
+    },
+    {
+      "input_tokens": 445,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 552,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 997,
+      "conservative_eur": 0.0681,
+      "accounted": true
+    },
+    {
+      "input_tokens": 445,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 566,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1011,
+      "conservative_eur": 0.06915,
+      "accounted": true
+    },
+    {
+      "input_tokens": 445,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 581,
+      "output_tokens_details": {
+        "reasoning_tokens": 28
+      },
+      "total_tokens": 1026,
+      "conservative_eur": 0.070275,
+      "accounted": true
+    },
+    {
+      "input_tokens": 457,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 540,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 997,
+      "conservative_eur": 0.06792,
+      "accounted": true
+    },
+    {
+      "input_tokens": 451,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 574,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1025,
+      "conservative_eur": 0.07011,
+      "accounted": true
+    },
+    {
+      "input_tokens": 450,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 542,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 992,
+      "conservative_eur": 0.06765,
+      "accounted": true
+    },
+    {
+      "input_tokens": 447,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 517,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 964,
+      "conservative_eur": 0.065595,
+      "accounted": true
+    },
+    {
+      "input_tokens": 454,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 546,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1000,
+      "conservative_eur": 0.06819,
+      "accounted": true
+    },
+    {
+      "input_tokens": 448,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 553,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1001,
+      "conservative_eur": 0.068355,
+      "accounted": true
+    },
+    {
+      "input_tokens": 455,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 518,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 973,
+      "conservative_eur": 0.06615,
+      "accounted": true
+    },
+    {
+      "input_tokens": 468,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 474,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 942,
+      "conservative_eur": 0.06363,
+      "accounted": true
+    },
+    {
+      "input_tokens": 466,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 527,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 993,
+      "conservative_eur": 0.067485,
+      "accounted": true
+    },
+    {
+      "input_tokens": 449,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 498,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 947,
+      "conservative_eur": 0.06429,
+      "accounted": true
+    },
+    {
+      "input_tokens": 443,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 476,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 919,
+      "conservative_eur": 0.06228,
+      "accounted": true
+    },
+    {
+      "input_tokens": 453,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 458,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 911,
+      "conservative_eur": 0.06153,
+      "accounted": true
+    },
+    {
+      "input_tokens": 457,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0
+      },
+      "output_tokens": 493,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 950,
+      "conservative_eur": 0.064395,
+      "accounted": true
+    }
+  ]
+}
