@@ -16,7 +16,7 @@ export async function callDirectOpenAI(
     onUsage?: (usage: { input_tokens: number; output_tokens: number }) => Promise<void>;
   } = {},
 ): Promise<InterpretResult> {
-  const apiKey = env["OPENAI_API_KEY"] || env["taro"];
+  const apiKey = env["OPENAI_API_KEY"] || env["poen_ai_key"] || env["taro"];
   if (!apiKey) return { ok: false, error: "AI paslauga nesukonfigūruota.", retryable: false };
 
   const cardsText = data.cards
