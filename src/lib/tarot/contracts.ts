@@ -9,7 +9,6 @@ export const InputSchema = z
         z
           .object({
             id: z.string().refine((id) => DECK.some((card) => card.id === id)),
-            reversed: z.boolean(),
           })
           .strict(),
       )

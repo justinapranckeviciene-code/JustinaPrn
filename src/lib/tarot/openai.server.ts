@@ -3,7 +3,7 @@ import { INSTRUCTIONS, jsonSchema } from "./prompt";
 
 type OriginalInput = {
   question: string;
-  cards: { name: string; position: string; reversed: boolean }[];
+  cards: { name: string; position: string }[];
 };
 
 /** Direct-provider candidate. Not enabled in production until budget and live quality checks pass. */
@@ -13,6 +13,8 @@ export async function callDirectOpenAI(
   fetcher: typeof fetch = fetch,
   options: {
     maxOutputTokens?: number;
+    /** Internal evaluation only; never accepted from browser input. */
+    instructions?: string;
     onUsage?: (usage: { input_tokens: number; output_tokens: number }) => Promise<void>;
   } = {},
 ): Promise<InterpretResult> {
@@ -20,7 +22,7 @@ export async function callDirectOpenAI(
   if (!apiKey) return { ok: false, error: "AI paslauga nesukonfigūruota.", retryable: false };
 
   const cardsText = data.cards
-    .map((c, i) => `${i + 1}. ${c.position}: ${c.name} (${c.reversed ? "apversta" : "tiesi"})`)
+    .map((c, i) => `${i + 1}. ${c.position}: ${c.name} (tiesi)`)
     .join("\n");
 
   let res: Response;
@@ -40,7 +42,7 @@ export async function callDirectOpenAI(
         stream: true,
         store: false,
         reasoning: { effort: "low" },
-        instructions: INSTRUCTIONS,
+        instructions: options.instructions ?? INSTRUCTIONS,
         input: [
           {
             role: "user",

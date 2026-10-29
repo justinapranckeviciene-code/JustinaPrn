@@ -66,7 +66,7 @@ function Index() {
     if (!cards || !aiReady || requestRef.current) return;
     const cacheKey = JSON.stringify([
       question.trim(),
-      cards.map((c) => [c.id, c.reversed, c.position]),
+      cards.map((c) => [c.id, c.position]),
     ]);
     const cached = readingsCache.current.get(cacheKey);
     if (cached) {
@@ -85,7 +85,7 @@ function Index() {
       const r = await interpret({
         data: {
           question,
-          cards: cards.map((c) => ({ id: c.id, reversed: c.reversed })),
+          cards: cards.map((c) => ({ id: c.id })),
         },
         signal: ctrl.signal,
       });
@@ -286,11 +286,7 @@ export function TarotCardView({
       </p>
       <button
         type="button"
-        aria-label={
-          flipped
-            ? `${card.name}${card.reversed ? ", apversta" : ""}`
-            : `Atversti kortą: ${card.position}`
-        }
+        aria-label={flipped ? card.name : `Atversti kortą: ${card.position}`}
         onClick={onFlip}
         className="flip block aspect-[11/19] w-full"
       >
@@ -301,7 +297,7 @@ export function TarotCardView({
           <div className="flip-face flip-front card-frame overflow-hidden rounded-lg bg-card">
             {imgFailed ? (
               <div
-                className={`flex h-full flex-col items-center justify-center p-2 ${card.reversed ? "rotate-180" : ""}`}
+                className="flex h-full flex-col items-center justify-center p-2"
               >
                 <span className="font-display text-base leading-tight">{card.name}</span>
               </div>
@@ -312,7 +308,7 @@ export function TarotCardView({
                 loading="eager"
                 onError={() => setImgFailed(true)}
                 className="h-full w-full object-contain"
-                style={{ transform: `rotate(${cardImageRotation(card)}deg)` }}
+                style={{ transform: `rotate(${cardImageRotation()}deg)` }}
               />
             )}
           </div>
@@ -325,15 +321,13 @@ export function TarotCardView({
         <p className="font-display text-sm leading-tight sm:text-base">{card.name}</p>
         {card.id === "major-12" && (
           <span className="sr-only">
-            {card.reversed
-              ? "Pakaruoklis apverstas: galva viršuje."
-              : "Pakaruoklis tiesus: žmogus kabo galva žemyn."}
+            Pakaruoklis tiesus: žmogus kabo galva žemyn.
           </span>
         )}
         <p
-          className={`mt-0.5 text-[10px] uppercase tracking-wider ${card.reversed ? "text-destructive" : "text-muted-foreground"}`}
+          className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground"
         >
-          {card.reversed ? "↻ Apversta" : "Tiesi"}
+          Tiesi
         </p>
       </div>
     </div>

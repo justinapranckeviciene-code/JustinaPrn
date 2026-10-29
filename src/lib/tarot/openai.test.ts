@@ -5,6 +5,7 @@ import { CASES } from "../../../audit/questions";
 import { callOriginalGateway } from "./interpret.server";
 import { callDirectOpenAI } from "./openai.server";
 import { INSTRUCTIONS } from "./prompt";
+import { INSTRUCTIONS as PREVIOUS_INSTRUCTIONS } from "../../../audit/before-upright/prompt";
 
 const reading = {
   direct: "Testas",
@@ -25,7 +26,7 @@ describe("direct provider migration contract (mocked, not a quality comparison)"
       resolve(__dirname, "../../../audit/original-interpret.functions.ts.txt"),
       "utf8",
     );
-    expect(original.match(/const INSTRUCTIONS = `([\s\S]*?)`;/)?.[1]).toBe(INSTRUCTIONS);
+    expect(original.match(/const INSTRUCTIONS = `([\s\S]*?)`;/)?.[1]).toBe(PREVIOUS_INSTRUCTIONS);
   });
   it("fixtures cover 30 questions, five categories and all 78 cards", () => {
     expect(CASES).toHaveLength(30);
@@ -39,7 +40,14 @@ describe("direct provider migration contract (mocked, not a quality comparison)"
     await callDirectOpenAI(entry, { OPENAI_API_KEY: "test-only" }, directFetch);
     const original = JSON.parse(originalFetch.mock.calls[0]![1].body);
     const direct = JSON.parse(directFetch.mock.calls[0]![1].body);
-    expect(direct).toEqual({ ...original, model: "gpt-6-astra" });
+    expect(direct.model).toBe("gpt-6-astra");
+    expect(direct.reasoning).toEqual(original.reasoning);
+    expect(direct.stream).toBe(original.stream);
+    expect(direct.store).toBe(original.store);
+    expect(direct.text).toEqual(original.text);
+    expect(direct.instructions).toBe(INSTRUCTIONS);
+    expect(direct.input[0].content).not.toContain("apversta");
+    entry.cards.forEach(c => expect(direct.input[0].content).toContain(c.name));
     expect(directFetch.mock.calls[0]![0]).toBe("https://api.openai.com/v1/responses");
     expect(directFetch.mock.calls[0]![1].headers).not.toHaveProperty("Lovable-API-Key");
   });
