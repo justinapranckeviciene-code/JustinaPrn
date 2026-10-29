@@ -118,6 +118,10 @@ function Index() {
           <div className="ornament mx-auto mt-4 w-40" aria-hidden />
         </header>
 
+        <p role="status" className="mt-6 rounded-lg border border-gold/30 bg-card/60 p-3 text-center text-sm text-muted-foreground">
+          Peržiūros versija. Kortas gali ištraukti ir apversti. AI interpretacijos dar ruošiamos.
+        </p>
+
         {!cards ? (
           <section className="mt-10 space-y-4">
             <div className="mx-auto flex max-w-xs justify-center -space-x-8" aria-hidden>
@@ -182,8 +186,9 @@ function Index() {
                 className="mt-8 w-full glow tracking-wider"
                 size="lg"
                 onClick={runInterpretation}
+                disabled
               >
-                GAUTI INTERPRETACIJĄ
+                AI INTERPRETACIJOS RUOŠIAMOS
               </Button>
             )}
             {ai.status === "loading" && (
