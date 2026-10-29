@@ -11,6 +11,10 @@ export async function callDirectOpenAI(
   data: OriginalInput,
   env: Record<string, string | undefined>,
   fetcher: typeof fetch = fetch,
+  options: {
+    maxOutputTokens?: number;
+    onUsage?: (usage: { input_tokens: number; output_tokens: number }) => Promise<void>;
+  } = {},
 ): Promise<InterpretResult> {
   const apiKey = env["OPENAI_API_KEY"];
   if (!apiKey) return { ok: false, error: "AI paslauga nesukonfigūruota.", retryable: false };
@@ -30,6 +34,9 @@ export async function callDirectOpenAI(
       signal: AbortSignal.timeout(70_000),
       body: JSON.stringify({
         model: "gpt-6-astra",
+        ...(options.maxOutputTokens
+          ? { max_output_tokens: options.maxOutputTokens, service_tier: "default" }
+          : {}),
         stream: true,
         store: false,
         reasoning: { effort: "low" },
@@ -86,7 +93,11 @@ export async function callDirectOpenAI(
         if (!line.startsWith("data:")) continue;
         const payload = line.slice(5).trim();
         if (!payload || payload === "[DONE]") continue;
-        let ev: { type?: string; delta?: string };
+        let ev: {
+          type?: string;
+          delta?: string;
+          response?: { usage?: { input_tokens: number; output_tokens: number } };
+        };
         try {
           ev = JSON.parse(payload) as { type?: string; delta?: string };
         } catch {
@@ -102,7 +113,18 @@ export async function callDirectOpenAI(
           await reader.cancel().catch(() => {});
           return { ok: false, error: "AI nepavyko sugeneruoti atsakymo.", retryable: true };
         }
-        if (ev.type === "response.completed") completed = true;
+        if (ev.type === "response.completed") {
+          completed = true;
+          const usage = ev.response?.usage;
+          if (
+            usage &&
+            Number.isSafeInteger(usage.input_tokens) &&
+            usage.input_tokens >= 0 &&
+            Number.isSafeInteger(usage.output_tokens) &&
+            usage.output_tokens >= 0
+          )
+            await options.onUsage?.(usage);
+        }
       }
     }
     if (completed) {

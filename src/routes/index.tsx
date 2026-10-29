@@ -40,7 +40,8 @@ type AiState =
   | { status: "error"; message: string; retryable: boolean };
 
 function Index() {
-  const { coffeeUrl } = Route.useLoaderData();
+  const { coffeeUrl, aiReady } = Route.useLoaderData();
+  const readingsCache = useRef(new Map<string, Reading>());
   const interpret = useServerFn(interpretReading);
   const [question, setQuestion] = useState("");
   const [cards, setCards] = useState<DrawnCard[] | null>(null);
@@ -62,7 +63,16 @@ function Index() {
   }
 
   async function runInterpretation() {
-    if (!cards || requestRef.current) return;
+    if (!cards || !aiReady || requestRef.current) return;
+    const cacheKey = JSON.stringify([
+      question.trim(),
+      cards.map((c) => [c.id, c.reversed, c.position]),
+    ]);
+    const cached = readingsCache.current.get(cacheKey);
+    if (cached) {
+      setAi({ status: "done", reading: cached });
+      return;
+    }
     const ctrl = new AbortController();
     requestRef.current = ctrl;
     let timedOut = false;
@@ -80,6 +90,11 @@ function Index() {
         signal: ctrl.signal,
       });
       if (requestRef.current !== ctrl) return;
+      if (r.ok) {
+        if (readingsCache.current.size >= 50)
+          readingsCache.current.delete(readingsCache.current.keys().next().value!);
+        readingsCache.current.set(cacheKey, r.reading);
+      }
       setAi(
         r.ok
           ? { status: "done", reading: r.reading }
@@ -118,9 +133,14 @@ function Index() {
           <div className="ornament mx-auto mt-4 w-40" aria-hidden />
         </header>
 
-        <p role="status" className="mt-6 rounded-lg border border-gold/30 bg-card/60 p-3 text-center text-sm text-muted-foreground">
-          Peržiūros versija. Kortas gali ištraukti ir apversti. AI interpretacijos dar ruošiamos.
-        </p>
+        {!aiReady && (
+          <p
+            role="status"
+            className="mt-6 rounded-lg border border-gold/30 bg-card/60 p-3 text-center text-sm text-muted-foreground"
+          >
+            Peržiūros versija. Kortas gali ištraukti ir apversti. AI interpretacijos dar ruošiamos.
+          </p>
+        )}
 
         {!cards ? (
           <section className="mt-10 space-y-4">
@@ -186,9 +206,9 @@ function Index() {
                 className="mt-8 w-full glow tracking-wider"
                 size="lg"
                 onClick={runInterpretation}
-                disabled
+                disabled={!aiReady}
               >
-                AI INTERPRETACIJOS RUOŠIAMOS
+                {aiReady ? "GAUTI INTERPRETACIJĄ" : "AI INTERPRETACIJOS RUOŠIAMOS"}
               </Button>
             )}
             {ai.status === "loading" && (

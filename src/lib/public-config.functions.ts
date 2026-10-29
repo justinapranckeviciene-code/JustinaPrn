@@ -1,8 +1,11 @@
 import { createServerFn } from "@tanstack/react-start";
 
 export const getPublicConfig = createServerFn({ method: "GET" }).handler(async () => {
+  const { aiReady } = await import("./tarot/guarded.server");
+  const ready = aiReady();
+  const result = (coffeeUrl: string | null) => ({ coffeeUrl, aiReady: ready });
   const value = process.env["COFFEE_URL"];
-  if (!value) return { coffeeUrl: null };
+  if (!value) return result(null);
   try {
     const url = new URL(value);
     const allowed = [
@@ -21,9 +24,9 @@ export const getPublicConfig = createServerFn({ method: "GET" }).handler(async (
       url.username ||
       url.password
     )
-      return { coffeeUrl: null };
-    return { coffeeUrl: url.href };
+      return result(null);
+    return result(url.href);
   } catch {
-    return { coffeeUrl: null };
+    return result(null);
   }
 });
