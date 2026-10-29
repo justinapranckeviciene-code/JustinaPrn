@@ -233,8 +233,11 @@ function Index() {
             )}
             {ai.status === "done" && <ReadingView reading={ai.reading} />}
 
-            <Button variant="ghost" className="mt-6 w-full" onClick={reset}>
-              Naujas klausimas
+            <Button
+              className="mt-8 h-14 w-full border border-gold/50 text-base font-semibold uppercase tracking-wide shadow-lg shadow-black/20"
+              onClick={reset}
+            >
+              Užduoti kitą klausimą
             </Button>
           </section>
         )}
