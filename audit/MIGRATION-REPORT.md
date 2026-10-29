@@ -1,5 +1,7 @@
 # TARO perkėlimo patikra – 2026-10-28
 
+Istorinis pradinis auditas. Dabartinė 2026-10-29 įgyvendinimo ir blokavimų būsena: [ACTIVATION-STATUS.md](ACTIVATION-STATUS.md).
+
 **Būsena: NEPUBLIKUOTA. Tai paruošta kopija, ne užbaigtas perkėlimas.**
 
 ## Išsaugotas originalas
