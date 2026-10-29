@@ -31,3 +31,13 @@ Pavyzdys be talpyklos: 1000 įvesties ir 1000 bendros išvesties žetonų kainuo
 `scripts/budget-canary.ts` skirtas tikrai privačiai saugyklai patikrinti Vercel build aplinkoje su atskiru vienkartiniu QA failu; jis AI nekviečia ir tikros mėnesio piniginės nekeičia. Tikro Vercel build žurnale patvirtinta: `Private budget store verified: concurrent cap, reconciliation, private cleanup. No AI calls.` Naujas deployment `dpl_D6FDR7vVV6b45G3rBn2CK6G1gJPi` pasiekė READY, commit `3744e7adea0542483c0e4bdabfc86b8f11f424ed`. HTTP patikra grąžino 200, puslapyje patvirtintas mom_justina pavadinimas, klausimo laukas ir pranešimas, kad AI dar ruošiamos.
 
 OpenAI rakto saugus sukūrimas anksčiau grąžino `OpenAI Platform rejected the API key request.` Priežastis nepateikta; negalima to vadinti lėšų trūkumu ar neteisingu slaptažodžiu be įrodymų. Vercel projekte vis dar nėra `OPENAI_API_KEY`. Pokalbyje atsiųstas ankstesnis raktas nenaudojamas ir turi būti atšauktas. Tikrų AI kokybės palyginimų atlikta 0 iš 30. Savanoriškai paramai dar nėra savininkės patvirtintos mokėjimo nuorodos.
+
+## Tikra AI patikra – 2026-10-29 ryte
+
+Savininkės įrašytas serverio slaptas nustatymas `poen_ai_key` pritaikytas production ir preview aplinkoms. Jo reikšmė neatverta ir į GitHub neįrašyta. Modelio GET patikra patvirtino prieigą prie `gpt-6-astra`; tai savaime nepatvirtina mokamo generavimo.
+
+Senoje viešoje svetainėje pateiktas tikras klausimas „Ar verta atnaujinti santykius su buvusiu partneriu?“. Ištrauktos kortos: Kalavijų Karalius apverstas, Taurių Dešimtukas tiesus, Kalavijų Karalienė apversta. Paspaudus interpretaciją gautas matomas „Not enough credits“, atsakymas nesugeneruotas.
+
+Naujas tiesioginis adapteris išbandytas su tuo pačiu klausimu, kortomis, orientacijomis ir originaliu promptu. Prieš kiekvieną iš dviejų bandymų bendroje tikroje piniginėje įrašytas maksimalus išlaidų rezervas. Pirmas bandymas grąžino nesėkmingą SSE atsakymą. Vienas diagnostinis pakartojimas parodė `response.failed` / `error`, kodas `credit_balance_exhausted` (deployment `dpl_GC594yjAC4Y7oLxjmC4BLsZuiRGT`). Daugiau mokamų bandymų neatlikta. Nežinomų sąnaudų rezervai saugiai palikti užimti; tikras žetonų sunaudojimas ir sąskaitos kaina nepatvirtinti.
+
+Tikrų sėkmingų interpretacijų 0; sėkmingų kokybės porų 0/30. Abu kreditų trūkumai blokuoja palyginimą. `AI_ENABLED` ir `AI_QUALITY_APPROVED` lieka false; nauja vieša AI paslauga nepaleista. Ankstesnis šio dokumento teiginys apie trūkstamą raktą yra istorinis ir pakeistas šios skilties duomenimis.
