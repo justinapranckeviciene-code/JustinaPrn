@@ -176,7 +176,7 @@ function Index() {
               PRADĖTI NEMOKAMĄ RITUALĄ
             </Button>
             <p className="text-center text-xs text-muted-foreground">
-              Trys kortos iš 78 kortų Rider–Waite–Smith kaladės.
+              Trys kortos iš visos 78 kortų Taro kaladės.
             </p>
           </section>
         ) : (
@@ -321,14 +321,9 @@ export function TarotCardView({
         <p className="font-display text-sm leading-tight sm:text-base">{card.name}</p>
         {card.id === "major-12" && (
           <span className="sr-only">
-            Pakaruoklis tiesus: žmogus kabo galva žemyn.
+            Pakaruoklio paveiksle žmogus kabo galva žemyn.
           </span>
         )}
-        <p
-          className="mt-0.5 text-[10px] uppercase tracking-wider text-muted-foreground"
-        >
-          Tiesi
-        </p>
       </div>
     </div>
   );

@@ -173,3 +173,11 @@ Prieš viešą publikavimą būtina užbaigti pilnų atsakymų ir interaktyvaus 
 
 **Kortų istorija:** Dabartinės situacijos pozicijoje Kalavijų Dvejetas vaizduoja užrištomis akimis sėdinčią figūrą, laikančią sukryžiuotus kalavijus. Tai sustabdyto sprendimo vaizdas: abi galimybes laikai pusiausvyroje, bet kartu gali neleisti sau aiškiai įvardyti, ko nori. Už figūros esantis vanduo primena jausmus, kurių vien logiškas argumentų svėrimas neaprėpia. Kliūties pozicijoje Pentaklių Dešimtukas šią aklavietę susieja su sukauptu saugumu, šeimos lūkesčiais ar įprastu sėkmės modeliu. Jo namai, kelios kartos ir turtas nėra blogybė — kliūtimi tampa reikalavimas, kad bet kuris naujas kelias iškart suteiktų tokią pačią atramą. Taip kūrybinę pradžią lygintum su jau pastatyta sistema. Patarimo pozicijoje Lazdų Tūzas, iš debesies tiesiama ranka su sprogstančia lazda, siūlo šią nelygią kovą pakeisti veiksmu: suteikti idėjai apčiuopiamą pradžią. Jis neatšaukia Pentaklių Dešimtuko vertės, bet išjudina Kalavijų Dvejeto sąstingį. Sprendimui reikia ne pažado apie sėkmę, o patirties, ar kūrybinis noras išlieka susidūręs su darbu.
 
+
+## Papildoma kalbos ir aiškumo korekcija po peržiūros
+
+Pašalintas matomas užrašas „Tiesi“ po kortomis. Naujame prompte uždrausti skaitytojui nereikalingi kaladės trumpiniai ir orientacijos komentarai; piešinių detalių aprašymai turi užleisti vietą klausimo bei trijų kortų ryšio interpretacijai.
+
+TAIP / NE taisyklė papildyta neiginių ir tikrinamo teiginio krypties patikra. Pavyzdžiui, „Ar bus sunku?“ ir „Ar nebus sunku?“ negali būti atsakomi tuo pačiu nepaaiškintu TAIP. Kai žyma dviprasmiška, reikia tiesiogiai įvardyti grįžimo sunkumą ar sklandumą pagal derinį.
+
+Aukščiau pateiktos 8 poros priklauso ankstesnei bandomojo prompto redakcijai. Šių papildomų kalbos taisyklių realių AI atsakymų patikra dar neatlikta; ankstesnių bandymų joms nepriskiriame. Viešas publikavimas vis dar nepatvirtintas.
