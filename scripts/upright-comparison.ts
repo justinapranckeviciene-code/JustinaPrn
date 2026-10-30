@@ -15,12 +15,21 @@ const cases = [
   ["S1","sprendimai","Ar šiuo metu verta persikelti gyventi į kitą miestą?",["major-0","major-12","major-7"]],
   ["S2","sprendimai","Kaip apsispręsti tarp saugaus darbo ir kūrybinės veiklos?",["minor-2-2","minor-3-10","minor-0-1"]],
 ] as const;
-for(const [id,category,question,ids] of cases) {
+// Explicit manual QA filters avoid repeating paid baseline calls when only the
+// current prompt needs its complete output reviewed. Runtime app code is unchanged.
+const selectedIds = process.env.QA_CASES?.split(",");
+if (selectedIds?.some(id => !cases.some(test => test[0] === id)))
+  throw new Error("Unknown QA case");
+const versions = process.env.QA_CANDIDATE_ONLY === "true"
+  ? [["candidate", INSTRUCTIONS] as const]
+  : [["previous", PREVIOUS] as const, ["candidate", INSTRUCTIONS] as const];
+let completed = 0;
+for(const [id,category,question,ids] of cases.filter(test => !selectedIds || selectedIds.includes(test[0]))) {
   const cards=ids.map((id,i)=>{
     const c=DECK.find(c=>c.id===id)!;
     return {name:c.name+" ("+c.nameEn+")",position:SPREAD_POSITIONS[i]!,reversed:false};
   });
-  for(const [version,instructions] of [["previous",PREVIOUS],["candidate",INSTRUCTIONS]] as const) {
+  for(const [version,instructions] of versions) {
     const data={question,cards};
     const requestId=randomUUID();
     const bound=inputTokenBound({data,INSTRUCTIONS:instructions,jsonSchema});
@@ -44,7 +53,8 @@ for(const [id,category,question,ids] of cases) {
       console.log("UPRIGHT_QA_CHUNK",JSON.stringify({id,version,part,text:record.slice(offset,offset+900)}));
     }
     if(!result.ok||!accounted) throw new Error("Comparison response or accounting failed");
+    completed++;
     await new Promise(r=>setTimeout(r,6500));
   }
 }
-console.log("UPRIGHT_QA_COMPLETE: 8 paired cases, 16 accounted responses");
+console.log("UPRIGHT_QA_COMPLETE",JSON.stringify({completed,candidateOnly:process.env.QA_CANDIDATE_ONLY === "true"}));
