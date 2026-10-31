@@ -41,7 +41,6 @@ export async function generateGuardedReading(
       return {
         name: `${card.name} (${card.nameEn})`,
         position: SPREAD_POSITIONS[i]!,
-        reversed: draw.reversed,
       };
     }),
   };

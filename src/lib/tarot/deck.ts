@@ -8,7 +8,7 @@ export type TarotCard = {
   arcana: "major" | "minor";
   image: string;
 };
-export type DrawnCard = TarotCard & { position: string; reversed: boolean };
+export type DrawnCard = TarotCard & { position: string };
 
 const MAJOR: [string, string][] = [
   ["Kvailys", "The Fool"],
@@ -91,7 +91,7 @@ function cryptoRandom() {
   return (a[0] ?? 0) / 2 ** 32;
 }
 
-/** Draws unique cards (no repeats) with positions and random orientation. */
+/** Draws unique cards (no repeats) with positions. All printed cards remain upright. */
 export function drawCards(
   positions = SPREAD_POSITIONS,
   rand: () => number = cryptoRandom,
@@ -103,10 +103,10 @@ export function drawCards(
     pool[i] = pool[j]!;
     pool[j] = tmp;
   }
-  return positions.map((position, i) => ({ ...pool[i]!, position, reversed: rand() < 0.5 }));
+  return positions.map((position, i) => ({ ...pool[i]!, position }));
 }
 
-/** RWS XII is naturally head-down. Reverse the printed card, not the figure. */
-export function cardImageRotation(card: Pick<DrawnCard, "reversed">): number {
-  return card.reversed ? 180 : 0;
+/** RWS XII is naturally head-down; never rotate the printed artwork. */
+export function cardImageRotation(): number {
+  return 0;
 }

@@ -4,10 +4,9 @@ import { describe, expect, it } from "vitest";
 import { DECK, drawCards, cardImageRotation } from "./deck";
 
 describe("tarot deck", () => {
-  it("keeps the Hanged Man printed card upright unless the draw is reversed", () => {
+  it("keeps the Hanged Man printed artwork upright", () => {
     expect(DECK.find((c) => c.id === "major-12")?.name).toBe("Pakaruoklis");
-    expect(cardImageRotation({ reversed: false })).toBe(0);
-    expect(cardImageRotation({ reversed: true })).toBe(180);
+    expect(cardImageRotation()).toBe(0);
   });
   it("has 78 unique cards", () => {
     expect(DECK).toHaveLength(78);
@@ -29,9 +28,9 @@ describe("tarot deck", () => {
       expect(new Set(cards.map((c) => c.id)).size).toBe(cards.length);
     }
   });
-  it("assigns every position and an orientation", () => {
+  it("assigns every position without drawing a reversed orientation", () => {
     const cards = drawCards(["A", "B", "C"]);
     expect(cards.map((c) => c.position)).toEqual(["A", "B", "C"]);
-    cards.forEach((c) => expect(typeof c.reversed).toBe("boolean"));
+    cards.forEach((c) => expect(c).not.toHaveProperty("reversed"));
   });
 });

@@ -1,5 +1,5 @@
 import { InputSchema, ReadingSchema, type InterpretResult } from "./contracts";
-import { INSTRUCTIONS, jsonSchema } from "./prompt";
+import { INSTRUCTIONS, jsonSchema } from "../../../audit/before-upright/prompt";
 
 type OriginalInput = {
   question: string;

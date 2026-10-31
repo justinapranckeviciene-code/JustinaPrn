@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from "vitest";
 import { callOriginalGateway, generateReading } from "./interpret.server";
 import { budgetKeys, reserveBudget } from "./budget.server";
-import { INSTRUCTIONS } from "./prompt";
+import { INSTRUCTIONS } from "../../../audit/before-upright/prompt";
 
 const input = {
   question: "Ką galiu pakeisti darbe?",
