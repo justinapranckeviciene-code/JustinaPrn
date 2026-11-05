@@ -6,6 +6,7 @@ import { INSTRUCTIONS, jsonSchema } from "../src/lib/tarot/prompt";
 import { INSTRUCTIONS as PREVIOUS } from "../audit/before-upright/prompt";
 import { DECK, SPREAD_POSITIONS } from "../src/lib/tarot/deck";
 const cases = [
+  ["SC","grįžimas į mokyklą","Ar vaikams nebus sunku grįžus po ilgesnių atostogų į mokyklą?",["major-6","major-4","major-7"]],
   ["R1","santykiai","Ar verta atnaujinti santykius su buvusiu partneriu?",["major-19","major-15","minor-1-7"]],
   ["R2","santykiai","Ar jo tylėjimas įrodo, kad jis mane apgaudinėja?",["major-18","major-2","minor-2-7"]],
   ["D1","darbas","Ar verta priimti vadovo pareigas, jei komanda nuolat konfliktuoja?",["major-4","minor-0-5","major-8"]],
