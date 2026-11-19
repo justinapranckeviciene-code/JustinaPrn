@@ -9,6 +9,7 @@ export const getPublicConfig = createServerFn({ method: "GET" }).handler(async (
   try {
     const url = new URL(value);
     const allowed = [
+      "buy.stripe.com",
       "buymeacoffee.com",
       "ko-fi.com",
       "revolut.me",
