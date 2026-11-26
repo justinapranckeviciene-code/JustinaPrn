@@ -222,8 +222,17 @@ function Index() {
                 role="alert"
                 className="mt-8 rounded-lg border border-destructive/60 bg-card p-4 text-sm"
               >
-                <p className="font-medium text-destructive">Interpretacijos gauti nepavyko</p>
-                <p className="mt-1 text-muted-foreground">{ai.message} Tavo kortos išsaugotos.</p>
+                <p className="font-medium text-destructive">
+                  {ai.message.startsWith("Vykdomi techniniai darbai.")
+                    ? "Vykdomi techniniai darbai"
+                    : "Interpretacijos gauti nepavyko"}
+                </p>
+                <p className="mt-1 text-muted-foreground">
+                  {ai.message.startsWith("Vykdomi techniniai darbai.")
+                    ? "TARO atsakymai laikinai nepasiekiami. Pabandyk vėliau."
+                    : ai.message}{" "}
+                  Tavo kortos išsaugotos.
+                </p>
                 {ai.retryable && (
                   <Button variant="outline" className="mt-3 w-full" onClick={runInterpretation}>
                     Bandyti dar kartą
