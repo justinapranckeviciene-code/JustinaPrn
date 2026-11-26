@@ -61,17 +61,25 @@ export async function callDirectOpenAI(
   if (!res.ok || !res.body) {
     const status = res.status;
     let msg = "";
+    let errorCode = "";
     try {
-      const j = (await res.json()) as { message?: string; error?: { message?: string } };
+      const j = (await res.json()) as { message?: string; error?: { message?: string; code?: string } };
       msg = j.message ?? j.error?.message ?? "";
+      errorCode = j.error?.code ?? "";
     } catch {
       /* ignore */
     }
     // Do not log provider messages: they can contain private request content.
+    if (status === 429 && ["insufficient_quota", "billing_hard_limit_reached"].includes(errorCode)) {
+      console.warn("TAROT_AI_PROVIDER_QUOTA_EXHAUSTED");
+      return { ok: false, error: "Vykdomi techniniai darbai. Pabandyk vėliau.", retryable: false };
+    }
     if (status === 429)
       return { ok: false, error: "Per daug užklausų. Pabandykite po minutės.", retryable: true };
-    if (status === 402)
-      return { ok: false, error: "AI paslaugos apmokėjimas nepasiekiamas.", retryable: false };
+    if (status === 402) {
+      console.warn("TAROT_AI_PROVIDER_PAYMENT_UNAVAILABLE");
+      return { ok: false, error: "Vykdomi techniniai darbai. Pabandyk vėliau.", retryable: false };
+    }
     if (status === 403) return { ok: false, error: "AI prieiga atmesta.", retryable: false };
     return { ok: false, error: "AI paslauga laikinai nepasiekiama.", retryable: status >= 500 };
   }

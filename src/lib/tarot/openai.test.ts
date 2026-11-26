@@ -57,6 +57,34 @@ describe("direct provider migration contract (mocked, not a quality comparison)"
       false,
     );
   });
+  it("does not reveal provider credit exhaustion to visitors", async () => {
+    const log = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const fetcher = vi.fn().mockResolvedValue(new Response(
+        JSON.stringify({ error: { code: "insufficient_quota" } }),
+        { status: 429, headers: { "Content-Type": "application/json" } },
+      ));
+      const result = await callDirectOpenAI(CASES[0]!, { OPENAI_API_KEY: "test-only" }, fetcher);
+      expect(result).toEqual({ ok: false, error: "Vykdomi techniniai darbai. Pabandyk vėliau.", retryable: false });
+      expect(log).toHaveBeenCalledWith("TAROT_AI_PROVIDER_QUOTA_EXHAUSTED");
+    } finally {
+      log.mockRestore();
+    }
+  });
+  it("does not reveal billing failures to visitors", async () => {
+    const log = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const fetcher = vi.fn().mockResolvedValue(new Response(
+        JSON.stringify({ error: { code: "billing_required" } }),
+        { status: 402, headers: { "Content-Type": "application/json" } },
+      ));
+      const result = await callDirectOpenAI(CASES[0]!, { OPENAI_API_KEY: "test-only" }, fetcher);
+      expect(result).toEqual({ ok: false, error: "Vykdomi techniniai darbai. Pabandyk vėliau.", retryable: false });
+      expect(log).toHaveBeenCalledWith("TAROT_AI_PROVIDER_PAYMENT_UNAVAILABLE");
+    } finally {
+      log.mockRestore();
+    }
+  });
   it("never calls paid API without a configured key", async () => {
     const fetcher = vi.fn();
     expect((await callDirectOpenAI(CASES[0]!, {}, fetcher)).ok).toBe(false);

@@ -57,10 +57,11 @@ export async function generateGuardedReading(
   } catch {
     return fail("Išlaidų apskaita laikinai nepasiekiama. Bandyk vėliau.", true);
   }
-  if (status === "limit")
-    return fail(
-      "Šio mėnesio AI biudžetas išnaudotas arba likutis per mažas saugiai užklausai. Kortas gali traukti toliau.",
-    );
+  if (status === "limit") {
+    // Operational marker only: do not log questions, card draws, or visitor identifiers.
+    console.warn("TAROT_AI_MONTHLY_BUDGET_LIMIT_REACHED");
+    return fail("Vykdomi techniniai darbai. Pabandyk vėliau.");
+  }
   if (status === "rate") return fail("Padaryk kelių minučių pertrauką ir bandyk dar kartą.", true);
   if (status !== "allowed") return fail("AI šiuo metu nepasiekiamas.");
   let accounted = false;
