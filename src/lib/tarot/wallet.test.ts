@@ -29,17 +29,17 @@ function memoryStore(): LedgerStore & { current: () => ReturnType<typeof emptyWa
   };
 }
 
-describe("shared conservative EUR 10 wallet", () => {
+describe("shared conservative EUR 20 wallet", () => {
   it("reserves before work and refuses a request that could exceed the cap", () => {
     const wallet = emptyWallet();
-    expect(claim(wallet, "one", 6_000_000, "a", NOW)).toBe("allowed");
-    expect(claim(wallet, "two", 6_000_000, "b", NOW)).toBe("limit");
+    expect(claim(wallet, "one", 12_000_000, "a", NOW)).toBe("allowed");
+    expect(claim(wallet, "two", 12_000_000, "b", NOW)).toBe("limit");
   });
   it("CAS prevents two independent server replicas from spending the same balance", async () => {
     const store = memoryStore();
     const results = await Promise.all(
       ["one", "two"].map((id) =>
-        mutateWallet((wallet) => claim(wallet, id, 6_000_000, id, NOW), store),
+        mutateWallet((wallet) => claim(wallet, id, 12_000_000, id, NOW), store),
       ),
     );
     expect(results.sort()).toEqual(["allowed", "limit"]);
@@ -57,8 +57,8 @@ describe("shared conservative EUR 10 wallet", () => {
   });
   it("retains unknown or failed requests across month boundaries", () => {
     const wallet = emptyWallet();
-    claim(wallet, "unknown", 6_000_000, "a", NOW);
-    expect(claim(wallet, "next", 6_000_000, "b", new Date("2026-11-01T12:00:00Z"))).toBe("limit");
+    claim(wallet, "unknown", 12_000_000, "a", NOW);
+    expect(claim(wallet, "next", 12_000_000, "b", new Date("2026-11-01T12:00:00Z"))).toBe("limit");
   });
   it("charges a cross-month completion conservatively to its completion month", () => {
     const wallet = emptyWallet();

@@ -1,4 +1,4 @@
-export const LIMIT_MICRO_EUR = 10_000_000;
+export const LIMIT_MICRO_EUR = 20_000_000;
 // Includes a deliberately conservative allowance for currency conversion and tax.
 export const EUR_PER_USD_CEILING = 1.5;
 export const OUTPUT_TOKEN_CEILING = 16_384;

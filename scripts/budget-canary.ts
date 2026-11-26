@@ -10,7 +10,7 @@ const store = blobLedger(path);
 const now = new Date("2026-10-29T10:00:00Z");
 const ids = [randomUUID(), randomUUID()];
 const outcomes = await Promise.all(
-  ids.map((id) => mutateWallet((wallet) => claim(wallet, id, 6_000_000, id, now), store)),
+  ids.map((id) => mutateWallet((wallet) => claim(wallet, id, 12_000_000, id, now), store)),
 );
 if (
   outcomes.filter((value) => value === "allowed").length !== 1 ||
