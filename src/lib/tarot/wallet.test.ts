@@ -6,6 +6,7 @@ import {
   monthKey,
   chargeMicroEur,
   LIMIT_MICRO_EUR,
+  PRICE_REVIEW_UNTIL,
 } from "./wallet-core";
 import { mutateWallet, type LedgerStore } from "./wallet.server";
 import { generateGuardedReading } from "./guarded.server";
@@ -86,7 +87,10 @@ describe("shared conservative EUR 30 wallet", () => {
     expect(claim(wallet, "thirteen", 100, "new", NOW)).toBe("rate");
   });
   it("stops when the reviewed price schedule expires", () => {
-    expect(claim(emptyWallet(), "one", 100, "a", new Date("2026-12-01"))).toBe("unavailable");
+    expect(
+      claim(emptyWallet(), "one", 100, "a", new Date(Date.parse(PRICE_REVIEW_UNTIL) - 1)),
+    ).toBe("allowed");
+    expect(claim(emptyWallet(), "one", 100, "a", new Date(PRICE_REVIEW_UNTIL))).toBe("unavailable");
   });
   it("rejects malformed or negative token counts", () => {
     expect(() => chargeMicroEur(-1, 5)).toThrow();

@@ -5,7 +5,10 @@ export const OUTPUT_TOKEN_CEILING = 16_384;
 // Also covers input-cache write premiums; actual standard input is cheaper.
 export const INPUT_USD_PER_MILLION_CEILING = 40;
 export const OUTPUT_USD_PER_MILLION = 50;
-export const PRICE_REVIEW_UNTIL = "2026-11-29T00:00:00Z";
+// Reviewed 2026-11-27: gpt-6-astra Standard is $10 input / $50 output per 1M tokens.
+// https://developers.openai.com/api/docs/pricing
+// Retain the conservative $40 input ceiling and all existing financial safeguards.
+export const PRICE_REVIEW_UNTIL = "2026-12-29T00:00:00Z";
 
 export type Wallet = {
   version: 1;
